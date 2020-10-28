@@ -1,7 +1,7 @@
 import React from 'react';
 import Player from './components/player'
 import maleSkin1 from './resources/m1.png';
-import maleSkin2 from './resources/m2.png';
+//import maleSkin2 from './resources/m2.png';
 
 
 function App() {
