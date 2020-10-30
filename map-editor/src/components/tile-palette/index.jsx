@@ -1,9 +1,9 @@
 import React from 'react';
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
-import springSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/spring.png';
+//import springSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/spring.png';
 
 
-const TilePalette = ({position, spriteSize}) => {
+const TilePalette = ({position, tileset, spriteSize}) => {
     
     const {width, height} = spriteSize;
     const tiles = [];
@@ -25,7 +25,7 @@ const TilePalette = ({position, spriteSize}) => {
 
     }
 
-    //console.table(tiles)
+    //console.dir(tileset.springSprite)
 
     return (
         <div
@@ -55,7 +55,7 @@ const TilePalette = ({position, spriteSize}) => {
                             row.map((tile, x) => <div style={{
                                 borderTop: "1px solid black",
                                 borderRight: "1px solid black",
-                                background: `url(${springSprite}) -${x*32}px -${y*32}px no-repeat`,
+                                background: `url(${tileset.springSprite}) -${x*32}px -${y*32}px no-repeat`,
                                 width: 32,
                                 height: 32,
 
