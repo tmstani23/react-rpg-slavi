@@ -13,6 +13,27 @@ body,
 * {
   font-family: "Airbnb Cereal App Book", sans-serif;
 }
+.flex-row-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+button {
+  color: rgb(75, 189, 255);
+  text-align: center;
+  background-color: white;
+  padding: 0.25rem;
+  margin: 0.25rem;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid grey;
+}
+button:hover {
+  background: black;
+}
 
 input[type="text"] {
   background-color: white;
