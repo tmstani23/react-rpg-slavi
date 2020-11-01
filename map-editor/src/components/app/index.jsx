@@ -15,6 +15,7 @@ const App = () => {
         fallSprite,
         winterSprite
     });
+    const [sprite, setSprite] = useState("springSprite");
     const [activeTile, setActiveTile] = useState({x: 1 * 32, y: 4 * 32})
     const [tiles, setTiles] = useState([]);
     const [mapSize, setMapSize] = useState({
@@ -57,9 +58,11 @@ const App = () => {
             position={position}
             tileset={tileset}
             setTileset={setTileset}
+            setSprite={setSprite}
+            sprite={sprite}
             activeTile={activeTile}
             setActiveTile={setActiveTile}
-            spriteSize={{
+            paletteSize={{
                 height: 288,
                 width: 640,
             }}
@@ -71,6 +74,7 @@ const App = () => {
             size={mapSize} 
             activeTile = {activeTile}
             setTiles = {setTiles}
+            sprite = {sprite}
         />
         
     </div>

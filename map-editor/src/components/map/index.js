@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Map = ({tiles, tileset, size, activeTile, setTiles}) => {
+const Map = ({tiles, tileset, size, activeTile, setTiles, sprite}) => {
     
 
     const cloneMatrix = (matrix) => {
@@ -49,7 +49,7 @@ const Map = ({tiles, tileset, size, activeTile, setTiles}) => {
                             style={{
                                 borderTop: "1px solid black",
                                 borderRight: "1px solid black",
-                                background: `url(${tileset.springSprite}) -${tile.v.x}px -${tile.v.y}px no-repeat`,
+                                background: `url(${tileset[sprite]}) -${tile.v.x}px -${tile.v.y}px no-repeat`,
                                 width: 32,
                                 height: 32,
 

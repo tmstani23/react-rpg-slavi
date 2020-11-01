@@ -4,45 +4,49 @@ import React, {useState} from 'react';
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
 
 
+
 const TilePalette = ({
     position, 
     tileset, 
-    spriteSize, 
+    paletteSize, 
     activeTile, 
-    setActiveTile
+    setActiveTile,
+    setSprite,
+    sprite
 }) => {
     
-    const [sprite, setSprite] = useState("springSprite");
-
-    const {width, height} = spriteSize;
-    const tiles = [];
-    let tileId = 0
-
-    for(let y = 0; y < height; y = y + 32) {
-        const row = [];
-
-        for(let x = 0; x < width; x = x + 32) {
-            //Create tile object and push it into row
-            row.push({
-                x, 
-                y, 
-                tileId: tileId++
-            })
-        }
-
-        tiles.push(row);
-
-    }
-
-    const selectTileset = (season) => {
+    const generatePaletteTileMatrix = () => {
         
+        const {width, height} = paletteSize;
+        const tiles = [];
+        let tileId = 0;
+
+        for(let y = 0; y < height; y = y + 32) {
+            const row = [];
+
+            for(let x = 0; x < width; x = x + 32) {
+                //Create tile object and push it into row
+                row.push({
+                    x, 
+                    y, 
+                    tileId: tileId++
+                })
+            }
+
+            tiles.push(row);
+
+        }
+        return tiles;
+    }
+    
+    const selectTileset = (season) => {
         
         switch(season) {
             case "fall":
-                setSprite('fallSprite')
+                setSprite("fallSprite")
               break;
             case "spring":
-                setSprite("springSprite")    
+                setSprite("springSprite")  
               break;
             case "winter":
                 setSprite("winterSprite")
@@ -53,10 +57,71 @@ const TilePalette = ({
         console.log(sprite)
 
         
-        return null;
+        return 1;
     }
 
+    const renderPaletteTiles = (tiles) => (
+        
+        tiles.map((row, y) => 
+            <div 
+                style={{
+                    display: "flex"
+                }}
+            > 
+                {
+                    row.map((tile, x) => 
+                    <div 
+                        onClick={() => setActiveTile({
+                                x: x * 32,
+                                y: y * 32
+                        })}
+                        style={{
+                            borderTop: "1px solid black",
+                            borderRight: "1px solid black",
+                            background: `url(${tileset[sprite]}) -${x*32}px -${y*32}px no-repeat`,
+                            width: 32,
+                            height: 32,
+                        }}
+                    />)
+                }
+            </div>
+        )
+        
+    )
+    const renderDragHandle = () => (
+        <div>
+            <img        
+            id="handle"
+            src={dragHandleImg} 
+            alt=""
+            />
+        </div>
+        
+    )
+
+    const renderActiveTile = () => (
+        <div 
+            style={{
+                background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
+                width: 32,
+                height: 32,
+
+            }}
+        />
+    )
+
+    const renderSpriteSelectButtons = () => (
+        <div className="center-row">
+            <button onClick={() => selectTileset("spring")}>Spring</button>
+            <button onClick={() => selectTileset("fall")}>Fall</button>
+            <button onClick={() => selectTileset("winter")}>Winter</button>
+        </div>
+    )
+
+
     const renderPalette = () => {
+        const tiles = generatePaletteTileMatrix();
+        
         return (
             <div
                 id="palette"
@@ -69,62 +134,23 @@ const TilePalette = ({
                     backgroundColor: "white"
                 }}
             >
-                <img        
-                    id="handle"
-                    src={dragHandleImg} 
-                    alt=""
-                />
-            <div 
-                style={{
-                    background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
-                    width: 32,
-                    height: 32,
-
-                }}
-            />
-            <div className="center-row">
-                    <button onClick={() => selectTileset("spring")}>Spring</button>
-                    <button onClick={() => selectTileset("fall")}>Fall</button>
-                    <button onClick={() => selectTileset("winter")}>Winter</button>
-            </div>
-        
                 {
-                tiles.map((row, y) => 
-                    <div 
-                        style={{
-                            display: "flex"
-                        }}
-                    > 
-                        {
-                            row.map((tile, x) => 
-                            <div 
-                                onClick={() => setActiveTile({
-                                        x: x * 32,
-                                        y: y * 32
-                                })}
-                                style={{
-                                    borderTop: "1px solid black",
-                                    borderRight: "1px solid black",
-                                    background: `url(${tileset[sprite]}) -${x*32}px -${y*32}px no-repeat`,
-                                    width: 32,
-                                    height: 32,
-                                }}
-                            > 
-                            </div>)
-                        }
-                    </div>
-                )
-            }
+                    [
+                        renderDragHandle(), 
+                        renderActiveTile(), 
+                        renderSpriteSelectButtons(), 
+                        renderPaletteTiles(tiles)
+                    ]
+                }
+ 
             </div>
         
         )
     }
 
-    //console.dir(tileset.springSprite)
-
     return (
         <div>
-            {renderPalette()}
+            {renderPalette(sprite)}
         </div>    
     )
 }
