@@ -1,23 +1,44 @@
 import React, {useState} from 'react';
-
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
+const tilesetData = require('../../data/tilesets.json');
 
-
+console.log(tilesetData)
 
 const TilePalette = ({
     position, 
-    tileset, 
-    paletteSize, 
+    tileset,
+    setTileset, 
     activeTile, 
     setActiveTile,
     setSprite,
     sprite
 }) => {
     
+    // Global variables
+    const tilesets = Object.keys(tilesetData).map (set => ({
+        type: "group",
+        name: set.replace(/~/g, " "),
+        items: tilesetData[set].variants.map(variant => ({
+            value: `${set}/${variant}`,
+            label: variant
+        }))
+    }))
+    console.log(tileset)
+
+    const tilesetGroup = {...tilesets[0]}
+    //console.log(tilesetGroup);
+    //console.log(tilesetGroup, tilesetVariant)
+    const {width, height} = tilesetData[tilesetGroup.name].size;
+    console.log(width,height)
+
     const generatePaletteTileMatrix = () => {
         
-        const {width, height} = paletteSize;
+        
+        
+        
         const tiles = [];
         let tileId = 0;
 
@@ -39,26 +60,26 @@ const TilePalette = ({
         return tiles;
     }
     
-    const selectTileset = (season) => {
+    // const selectTileset = (season) => {
         
-        switch(season) {
-            case "fall":
-                setSprite("fallSprite")
-              break;
-            case "spring":
-                setSprite("springSprite")  
-              break;
-            case "winter":
-                setSprite("winterSprite")
-                break;
-            default:
-                setSprite("springSprite")
-          }  
-        console.log(sprite)
+    //     switch(season) {
+    //         case "fall":
+    //             setSprite("fallSprite")
+    //           break;
+    //         case "spring":
+    //             setSprite("springSprite")  
+    //           break;
+    //         case "winter":
+    //             setSprite("winterSprite")
+    //             break;
+    //         default:
+    //             setSprite("springSprite")
+    //       }  
+    //     console.log(sprite)
 
         
-        return 1;
-    }
+    //     return 1;
+    // }
 
     const renderPaletteTiles = (tiles) => (
         
@@ -89,12 +110,27 @@ const TilePalette = ({
         
     )
     const renderDragHandle = () => (
-        <div>
+        <div style={{display: "flex", margin: 4}}>
             <img        
             id="handle"
             src={dragHandleImg} 
             alt=""
             />
+            <div style={{position: "relative", width: 32, marginLeft: 8}}>
+                {renderActiveTile()}
+            </div>
+            <div style={{width: 200, marginLeft: 8}}>
+                <Dropdown 
+                    options={tilesets}
+                    onChange={(tileset) => {
+                        console.log(tileset)
+                        setSprite(tileset.label)
+                        }
+                    }
+                    value={tileset}
+                />
+            </div>
+            
         </div>
         
     )
@@ -110,13 +146,13 @@ const TilePalette = ({
         />
     )
 
-    const renderSpriteSelectButtons = () => (
-        <div className="center-row">
-            <button onClick={() => selectTileset("spring")}>Spring</button>
-            <button onClick={() => selectTileset("fall")}>Fall</button>
-            <button onClick={() => selectTileset("winter")}>Winter</button>
-        </div>
-    )
+    // const renderSpriteSelectButtons = () => (
+    //     <div className="center-row">
+    //         <button onClick={() => selectTileset("spring")}>Spring</button>
+    //         <button onClick={() => selectTileset("fall")}>Fall</button>
+    //         <button onClick={() => selectTileset("winter")}>Winter</button>
+    //     </div>
+    // )
 
 
     const renderPalette = () => {
@@ -137,8 +173,8 @@ const TilePalette = ({
                 {
                     [
                         renderDragHandle(), 
-                        renderActiveTile(), 
-                        renderSpriteSelectButtons(), 
+                        
+                        // renderSpriteSelectButtons(), 
                         renderPaletteTiles(tiles)
                     ]
                 }
