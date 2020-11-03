@@ -1,16 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
 const tilesetData = require('../../data/tilesets.json');
 
-console.log(tilesetData)
-
 const TilePalette = ({
-    position, 
-    tileset,
-    setTileset, 
+    position,
+    setBgTile, 
+    tileset, 
     activeTile, 
     setActiveTile,
     setSprite,
@@ -18,7 +16,7 @@ const TilePalette = ({
 }) => {
     
     // Global variables
-    const tilesets = Object.keys(tilesetData).map (set => ({
+    const tilesetsJson = Object.keys(tilesetData).map (set => ({
         type: "group",
         name: set.replace(/~/g, " "),
         items: tilesetData[set].variants.map(variant => ({
@@ -26,18 +24,14 @@ const TilePalette = ({
             label: variant
         }))
     }))
-    console.log(tileset)
+    //console.log(tilesetsJson)
 
-    const tilesetGroup = {...tilesets[0]}
+    const tilesetGroup = {...tilesetsJson[0]}
     //console.log(tilesetGroup);
     //console.log(tilesetGroup, tilesetVariant)
     const {width, height} = tilesetData[tilesetGroup.name].size;
-    console.log(width,height)
 
     const generatePaletteTileMatrix = () => {
-        
-        
-        
         
         const tiles = [];
         let tileId = 0;
@@ -59,27 +53,6 @@ const TilePalette = ({
         }
         return tiles;
     }
-    
-    // const selectTileset = (season) => {
-        
-    //     switch(season) {
-    //         case "fall":
-    //             setSprite("fallSprite")
-    //           break;
-    //         case "spring":
-    //             setSprite("springSprite")  
-    //           break;
-    //         case "winter":
-    //             setSprite("winterSprite")
-    //             break;
-    //         default:
-    //             setSprite("springSprite")
-    //       }  
-    //     console.log(sprite)
-
-        
-    //     return 1;
-    // }
 
     const renderPaletteTiles = (tiles) => (
         
@@ -121,7 +94,7 @@ const TilePalette = ({
             </div>
             <div style={{width: 200, marginLeft: 8}}>
                 <Dropdown 
-                    options={tilesets}
+                    options={tilesetsJson}
                     onChange={(tileset) => {
                         console.log(tileset)
                         setSprite(tileset.label)
@@ -129,6 +102,15 @@ const TilePalette = ({
                     }
                     value={tileset}
                 />
+            </div>
+
+            <div style={{width: 200, marginLeft: 8}}> 
+                    <button 
+                        onClick={() => setBgTile(activeTile)}
+                        
+                    >
+                        Fill Background
+                    </button>
             </div>
             
         </div>
@@ -145,15 +127,6 @@ const TilePalette = ({
             }}
         />
     )
-
-    // const renderSpriteSelectButtons = () => (
-    //     <div className="center-row">
-    //         <button onClick={() => selectTileset("spring")}>Spring</button>
-    //         <button onClick={() => selectTileset("fall")}>Fall</button>
-    //         <button onClick={() => selectTileset("winter")}>Winter</button>
-    //     </div>
-    // )
-
 
     const renderPalette = () => {
         const tiles = generatePaletteTileMatrix();
@@ -172,9 +145,7 @@ const TilePalette = ({
             >
                 {
                     [
-                        renderDragHandle(), 
-                        
-                        // renderSpriteSelectButtons(), 
+                        renderDragHandle(),  
                         renderPaletteTiles(tiles)
                     ]
                 }
