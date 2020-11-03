@@ -1,12 +1,12 @@
 import React, {useEffect, useState } from 'react';
 import '../../map_editor_resources/css/styles.css';
-import TilePalette from '../../components/tile-palette';
+import TilePalette from '../Tile-Palette';
 import useDraggable from "../../hooks/use-draggable";
 import springSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/spring.png';
 import fallSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/fall.png';
 import winterSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/winter.png';
 
-import Map from '../../components/map';
+import Map from '../Map';
 
 
 const App = () => {
@@ -18,10 +18,11 @@ const App = () => {
     const [sprite, setSprite] = useState("springSprite");
     const [activeTile, setActiveTile] = useState({x: 1 * 32, y: 4 * 32})
     const [tiles, setTiles] = useState([]);
-    const [mapSize, setMapSize] = useState({
+    const mapSize = {
         width: 800,
         height: 600,
-    })
+    }
+    const [bgTile, setBgTile] = useState({x: -32, y: -32})
     const {position} = useDraggable("handle")
 
     useEffect(() => {
@@ -62,19 +63,17 @@ const App = () => {
             sprite={sprite}
             activeTile={activeTile}
             setActiveTile={setActiveTile}
-            paletteSize={{
-                height: 288,
-                width: 640,
-            }}
+            setBgTile={setBgTile}
         />
 
         <Map 
             tiles={tiles} 
             tileset={tileset} 
-            size={mapSize} 
+            mapSize={mapSize} 
             activeTile = {activeTile}
             setTiles = {setTiles}
             sprite = {sprite}
+            bgTile={bgTile}
         />
         
     </div>

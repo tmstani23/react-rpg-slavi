@@ -20,13 +20,16 @@ body,
   align-items: center;
 }
 
+.Dropdown-control {
+  height: 2rem;
+}
 button {
   color: rgb(75, 189, 255);
   text-align: center;
   background-color: white;
   padding: 0.25rem;
   margin: 0.25rem;
-  width: 4rem;
+  width: 8rem;
   height: 2rem;
   border-radius: 0.5rem;
   border: 1px solid grey;

@@ -19,11 +19,12 @@ const useDraggable = (id) => {
             })
         })
         return () => {
+            //console.log(move)
             document.body.removeEventListener("mousedown", move)
             document.body.removeEventListener("mouseup", move)
             document.body.removeEventListener("mousemove", move)
         }
-    })
+    }, [])
 
     const move = (event) => {
         const pos = {
