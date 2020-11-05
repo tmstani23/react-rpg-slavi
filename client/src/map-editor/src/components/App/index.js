@@ -18,12 +18,9 @@ const App = () => {
     const [sprite, setSprite] = useState("springSprite");
     const [activeTile, setActiveTile] = useState({x: 1 * 32, y: 4 * 32})
     const [tiles, setTiles] = useState([]);
-    const mapSize = {
-        width: 800,
-        height: 600,
-    }
+    const mapSize = {width: 800, height: 600};
     const [bgTile, setBgTile] = useState({x: -32, y: -32})
-    const {position} = useDraggable("handle")
+    const {position} = useDraggable("handle");
 
     useEffect(() => {
         const _tiles = [];
@@ -37,6 +34,7 @@ const App = () => {
                     y,
                     id: id++,
                     v: { x: -32, y: -32 },
+                    tileSprite: sprite
                 })
             }
             _tiles.push(row);
@@ -64,6 +62,7 @@ const App = () => {
             activeTile={activeTile}
             setActiveTile={setActiveTile}
             setBgTile={setBgTile}
+            mapTiles={tiles}
         />
 
         <Map 

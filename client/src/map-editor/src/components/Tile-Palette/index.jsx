@@ -1,6 +1,8 @@
 import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+import fs from "fs";
+
 
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
 const tilesetData = require('../../data/tilesets.json');
@@ -8,7 +10,8 @@ const tilesetData = require('../../data/tilesets.json');
 const TilePalette = ({
     position,
     setBgTile, 
-    tileset, 
+    tileset,
+    mapTiles, 
     activeTile, 
     setActiveTile,
     setSprite,
@@ -111,6 +114,12 @@ const TilePalette = ({
                     >
                         Fill Background
                     </button>
+                    <button 
+                        onClick={() => saveMapFile(mapTiles)}
+                        
+                    >
+                        Export Map
+                    </button>
             </div>
             
         </div>
@@ -127,6 +136,21 @@ const TilePalette = ({
             }}
         />
     )
+
+    const saveMapFile = (mapTiles) => {
+        
+        console.log(JSON.stringify(mapTiles, null, 4))
+        let data = JSON.stringify(mapTiles, null, 4);
+
+        fs.writeFile('first_map.json', data, (err) => {
+            if (err) {
+                throw err;
+            }
+            console.log("JSON data is saved.");
+        });
+        
+        
+    }
 
     const renderPalette = () => {
         const tiles = generatePaletteTileMatrix();

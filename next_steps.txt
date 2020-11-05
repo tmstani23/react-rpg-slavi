@@ -1,0 +1,10 @@
+add sprite tag to tile
+export map to json object
+    convert tiles to json in tilepallet component
+    write json string to file in node
+        info on process: https://attacomsian.com/blog/nodejs-write-json-object-to-file
+add collision boundaries to object tiles
+add collision logic to player interacting with map
+add basic items to map
+add enemies to map
+add basic health and damage system
