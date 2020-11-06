@@ -139,15 +139,25 @@ const TilePalette = ({
 
     const saveMapFile = (mapTiles) => {
         
-        console.log(JSON.stringify(mapTiles, null, 4))
+        
         let data = JSON.stringify(mapTiles, null, 4);
 
-        fs.writeFile('first_map.json', data, (err) => {
-            if (err) {
-                throw err;
-            }
-            console.log("JSON data is saved.");
-        });
+        console.log(data);
+
+        fetch('/api/maps', {
+            method: 'POST',
+            headers: {
+            'Content-type': 'application/json'
+            }, 
+            body: data,
+          })
+            .then(res => res.json())
+            .then(res => {
+              
+              console.log(res, "afterfetch response")
+              
+            })
+            .catch(err => console.log(err))
         
         
     }
