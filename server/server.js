@@ -9,7 +9,7 @@ const cors = require("cors");
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 //cors middleware
 app.use(cors());
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 })
 
 // POST /api/maps gets JSON bodies
-app.post('/api/maps', jsonParser, function (req, res) {
+app.post('/api/maps', function (req, res) {
     // create user in req.body
     console.log(req.body);
     res.send('Map Posted, ')

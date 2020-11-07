@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import fs from "fs";
+
 
 
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
