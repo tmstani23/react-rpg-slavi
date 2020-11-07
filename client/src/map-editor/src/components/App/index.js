@@ -34,7 +34,6 @@ const App = () => {
                     y,
                     id: id++,
                     v: { x: -32, y: -32 },
-                    tileSprite: sprite
                 })
             }
             _tiles.push(row);

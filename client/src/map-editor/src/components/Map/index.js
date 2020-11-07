@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 
 const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) => {
     
@@ -20,6 +20,8 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
             
             const clone = cloneMatrix(prev);
             // alter tile 0 x/y to active tile
+
+            //console.log(sprite);
             const tile = {
                 // copy entire tile at xy location and update value to active tile state
                 ...clone[y][x],
@@ -42,12 +44,14 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
             {
                 tiles.map((row, y) => 
                     <div
+                        key={y+420}
                         style={{display: "flex"}}
                     > 
                         {
                             row.map((tile, x) => {
                                 return (
                                     <div
+                                        key={x+420}
                                         onClick={() => dropTile({x, y})}
                                         style={{
                                             borderTop: "1px solid black",
