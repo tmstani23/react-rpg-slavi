@@ -24,13 +24,20 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/api/get-map', (req, res) => {
+
+  const mapJson = readMapFile();
+  console.log(typeof mapJson);
+  res.send(mapJson)
+})
+
 // POST /api/maps gets JSON bodies
 app.post('/api/maps', function (req, res) {
     // create user in req.body
     //console.log(typeof req.body);
     //console.log(req.body);
     exportMapToFile(req.body);
-    res.send('Map Posted, ')
+    res.send({data: 'Map posted!'})
   })
 
 
@@ -53,4 +60,47 @@ const exportMapToFile = (jsonMap) => {
     }
     console.log("JSON data is saved.");
   });
+}
+
+const readMapFile = () => {
+  let jsonMap = [];
+  const mapFileName = "map1.json";
+  const mapPath = `${path.dirname(__filename)}/maps/${mapFileName}`;
+  
+  //console.log(mapPath);
+
+  // read JSON object from file
+//   try {
+//     fs.readFileSync(mapPath, 'utf-8', (err, map) => {
+//       // if (err) {
+//       //     throw err;
+//       // }
+  
+//       // parse JSON object
+//       const parsedJsonMap = JSON.parse(map.toString());
+  
+//       // print JSON object
+//       console.log(parsedJsonMap);
+//       jsonMap = parsedJsonMap;
+      
+  
+//     })
+// } catch (error) {
+//     console.error(err);
+// }
+
+let stringMap = fs.readFileSync(mapPath, 'utf-8') 
+  
+//console.log(stringMap, "stringmap")
+// parse JSON object
+const parsedJsonMap = JSON.parse(stringMap.toString());
+
+// print JSON object
+//console.log(parsedJsonMap, "parsedJsonmap");
+
+    
+return  parsedJsonMap;  
+    
+  
+  
 }

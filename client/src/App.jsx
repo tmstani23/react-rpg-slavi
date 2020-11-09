@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import Player from './components/player'
 import maleSkin1 from './resources/m1.png';
 import Map from './components/Map';
-import springSprite from '../../client/src/map-editor/src/map_editor_resources/sprites/rpg-nature-tileset/spring.png';
-import fallSprite from '../../client/src/map-editor/src/map_editor_resources/sprites/rpg-nature-tileset/fall.png';
-import winterSprite from '../../client/src/map-editor/src/map_editor_resources/sprites/rpg-nature-tileset/winter.png';
-import currentMapTiles from './components/Map/map1.json'
+import springSprite from '../../client/src/resources/rpg-nature-tileset/spring.png';
+import fallSprite from '../../client/src/resources/rpg-nature-tileset/fall.png';
+import winterSprite from '../../client/src/resources/rpg-nature-tileset/winter.png';
+//import currentMapTiles from './components/Map/map1.json'
 
 
 function App() {
@@ -15,9 +15,30 @@ function App() {
     winterSprite
   });
   const [sprite, setSprite] = useState("springSprite");
-  const [tiles, setTiles] = useState(currentMapTiles);
+  const [tiles, setTiles] = useState([]);
   const mapSize = {width: 800, height: 600};
-  console.log(currentMapTiles)
+  //console.log(currentMapTiles)
+
+
+  useEffect(() => {
+    
+    fetch('http://localhost:3002/api/get-map', {
+      method: 'GET',
+      headers: {
+      'Content-type': 'application/json'
+      }, 
+      
+    })
+      .then(res => res.json())
+      .then(res => {
+        console.log(res)
+        setTiles(res);
+        
+      })
+      .catch(err => console.log(err))
+    
+      
+}, [])
   return (
     <div>
       <Map mapSize={mapSize} tiles={tiles} tileset={tileset} sprite={sprite} >

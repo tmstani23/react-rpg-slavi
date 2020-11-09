@@ -3,10 +3,14 @@ X - export map to json object
 X-convert tiles to json in tilepallet component
 X-write json string to file in node
     info on process: https://attacomsian.com/blog/nodejs-write-json-object-to-file
-- create map component in main app
-    -add background layer
-- fetch map from server in use effect
+X create map component in main app
     
+X fetch map from server
+    -display tiles
+        -read tiles to get correct sprite map
+            -create background layer
+
+add dynamic production/dev paths to fetch calls    
 add collision boundaries to object tiles
 add collision logic to player interacting with map
 add basic items to map
