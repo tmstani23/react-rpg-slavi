@@ -1,14 +1,28 @@
 X - add sprite tag to tile
+    
 X - export map to json object
+    X add sprite to exported Json object
+     
 X-convert tiles to json in tilepallet component
 X-write json string to file in node
-    info on process: https://attacomsian.com/blog/nodejs-write-json-object-to-file
+    X add current Time and sprite to filename:
+
 X create map component in main app
+
+X - create get filenames route on server
+
+x - fetch list of map names in maps directory from server
+        X- hookup route on frontend and test
+
+Create map name selector dropdown
+    create map name selector component
+        
+        link selected map to display tiles component
+        fetch map from server
     
-X fetch map from server
-    -display tiles
-        -read tiles to get correct sprite map
-            -create background layer
+-display tiles
+    -read tiles to get correct sprite map
+        -create background layer
 
 add dynamic production/dev paths to fetch calls    
 add collision boundaries to object tiles

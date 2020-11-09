@@ -5,6 +5,7 @@ import Map from './components/Map';
 import springSprite from '../../client/src/resources/rpg-nature-tileset/spring.png';
 import fallSprite from '../../client/src/resources/rpg-nature-tileset/fall.png';
 import winterSprite from '../../client/src/resources/rpg-nature-tileset/winter.png';
+//import getMapFilenames from './hooks/get-map-filenames';
 //import currentMapTiles from './components/Map/map1.json'
 
 
@@ -17,7 +18,7 @@ function App() {
   const [sprite, setSprite] = useState("springSprite");
   const [tiles, setTiles] = useState([]);
   const mapSize = {width: 800, height: 600};
-  //console.log(currentMapTiles)
+  
 
 
   useEffect(() => {

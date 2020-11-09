@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import getMapFilenames from '../../hooks/get-map-filenames';
+
 
 const Map = (props) => {
-    // console.log(props.children)
     const {mapSize, tiles,tileset, sprite} = props
     const bgTile = {}
+    const mapFileNames = () => getMapFilenames();
+    console.log(mapFileNames())
+    
+
     const renderTileLayers = (tileType) => (
         
         <div style={{

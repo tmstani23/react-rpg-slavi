@@ -59,9 +59,9 @@ const TilePalette = ({
 
     const renderPaletteTiles = (tiles) => (
         
-        tiles.map((row, y) => 
+        tiles.map((row, y, index) => 
             <div 
-                key={y+420}
+                key={y+420+index}
                 style={{
                     display: "flex"
                 }}
@@ -69,7 +69,7 @@ const TilePalette = ({
                 {
                     row.map((tile, x) => 
                     <div 
-                        key={x+420}
+                        key={x+420+index}
                         onClick={() => setActiveTile({
                                 x: x * 32,
                                 y: y * 32
@@ -141,13 +141,18 @@ const TilePalette = ({
 
     const saveMapFile = (mapTiles) => {
 
-        //console.log(checkForActive);
+        //add sprite to map object
+        let jsonMap = {
+            tileSetSprite: sprite,
+            mapTiles
+        }
         
-        let data = JSON.stringify(mapTiles, null, 4);
-        // let data = {map: mapTiles}; 
-        // data = {map: "req working"}; 
-        //console.log()
-        console.log(data);
+
+        //console.log(jsonMap);
+
+        let data = JSON.stringify(jsonMap, null, 4);
+        
+        //console.log(data);
 
         fetch('http://localhost:3002/api/maps', {
             method: 'POST',
