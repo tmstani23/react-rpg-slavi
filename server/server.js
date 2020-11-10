@@ -24,10 +24,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/api/get-map', (req, res) => {
-
-  const mapJson = readMapFile();
+app.post('/api/get-map', (req, res) => {
   
+  const mapFilename = req.body.mapFilename
+  console.log(mapFilename, "in get-map route")
+  const mapJson = readMapFile(mapFilename);
+  //console.log(mapJson, 'mapJson in post route')
   res.send(mapJson)
 })
 
@@ -88,9 +90,9 @@ const exportMapToFile = (jsonMap) => {
   });
 }
 
-const readMapFile = () => {
+const readMapFile = (mapFileName) => {
   let jsonMap = [];
-  const mapFileName = "map1.json";
+  //mapFileName = "map1.json";
   const mapPath = `${path.dirname(__filename)}/maps/${mapFileName}`;
   
   //console.log(mapPath);

@@ -1,14 +1,13 @@
-import React, {useEffect} from 'react';
-import getMapFilenames from '../../hooks/get-map-filenames';
-
+import React, {useEffect, useState} from 'react';
+import DropdownComponent from '../../components/Dropdown'
 
 const Map = (props) => {
-    const {mapSize, tiles,tileset, sprite} = props
-    const bgTile = {}
-    const mapFileNames = () => getMapFilenames();
-    console.log(mapFileNames())
     
-
+    const {tiles,tileset, sprite, setMapFile, userSelectedMapFile} = props
+    const bgTile = {}
+    const mapSize = {width: 800, height: 600};
+    
+    
     const renderTileLayers = (tileType) => (
         
         <div style={{
@@ -28,8 +27,6 @@ const Map = (props) => {
                                         key={x+420}
                                         
                                         style={{
-                                            borderTop: "1px solid black",
-                                            borderRight: "1px solid black",
                                             background: `url(${tileset[sprite]}) -${tileType === bgTile ? bgTile.x : tile.v.x}px -${tileType === bgTile ? bgTile.y : tile.v.y}px no-repeat`,
                                             width: 32,
                                             height: 32,
@@ -55,7 +52,12 @@ const Map = (props) => {
                 width: mapSize.width,
             }}
         >
-             {/* Background Layer */}
+            <DropdownComponent 
+                className="dropdown-layout-div" 
+                userSelectedMapFile={userSelectedMapFile}
+                setMapFile={setMapFile}
+            />
+            {/* Background Layer */}
             {/* {renderTileLayers(bgTile)} */}
             {/* Foreground layer */}
             {renderTileLayers("notBgTile")}

@@ -14,15 +14,16 @@ X - create get filenames route on server
 x - fetch list of map names in maps directory from server
         X- hookup route on frontend and test
 
-Create map name selector dropdown
-    create map name selector component
-        
-        link selected map to display tiles component
-        fetch map from server
+X - create map name selector component
+    X - Create map name selector dropdown
+        x - link selected map to display tiles component
+        x - fetch map from server
     
 -display tiles
-    -read tiles to get correct sprite map
-        -create background layer
+    x - read tiles obj to get correct sprite map
+        - create reset display function that clears all previously rendered tiles
+- create background layer functionality
+- create separate map select component that runs before initial map render
 
 add dynamic production/dev paths to fetch calls    
 add collision boundaries to object tiles

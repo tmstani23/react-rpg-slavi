@@ -5,6 +5,15 @@ body {
   color: white;
   opacity: 0.8;
 }
+.Dropdown-control {
+  height: 2rem;
+}
+.dropdown-layout-div {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  width: 400px;
+}
 
 .zone-container {
   box-sizing: border-box;
