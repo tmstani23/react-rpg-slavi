@@ -4,7 +4,7 @@ import 'react-dropdown/style.css';
 import getMapFilenames from '../../hooks/get-map-filenames';
 
 const DropdownComponent = (props) => {
-    const {userSelectedMapFile, setMapFile} = props
+    const {userSelectedMapFile, setIsHome, setMapFile} = props
     const mapFileNames = getMapFilenames();
     //console.log(mapFileNames)
     console.log(userSelectedMapFile);
@@ -21,6 +21,8 @@ const DropdownComponent = (props) => {
                     onChange={(options) => {
                         //console.log(options.value)
                         setMapFile(options.value)
+                        //show map screen
+                        setIsHome(false)
                         }
                     }
                     value={userSelectedMapFile}

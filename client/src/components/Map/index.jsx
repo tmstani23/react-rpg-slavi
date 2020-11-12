@@ -3,16 +3,37 @@ import DropdownComponent from '../../components/Dropdown'
 
 const Map = (props) => {
     
-    const {tiles,tileset, sprite, setMapFile, userSelectedMapFile} = props
-    const bgTile = {}
+    const {tiles, setIsHome, tileset, bgTile, sprite} = props
     const mapSize = {width: 800, height: 600};
     
-    
-    const renderTileLayers = (tileType) => (
+    const spriteRenderOptions = (
+        tileType, 
+        tile
+    ) => {
         
-        <div style={{
+        const xPos = tileType === bgTile ? bgTile.x : tile.v.x;
+        const yPos = tileType === bgTile ? bgTile.y : tile.v.y;
+        let zIndexVar;
+        
+        zIndexVar = tileType === bgTile ? zIndexVar = 0 : zIndexVar = 1;
+
+        return {
+            xPos,
+            yPos,
+            zIndexVar
+        }
+    }
+    
+    const renderTileLayers = (tileType) => {
+        const defaultTile = {
+            x:32,
+            y:-32,
+            v: { x: -32, y: -32 }
+        }
+            
+        return <div style={{
             position: "absolute",
-            zIndex: 1
+            zIndex: spriteRenderOptions(tileType, defaultTile).zIndexVar
         }}>
             {
                 tiles.map((row, y) => 
@@ -27,7 +48,8 @@ const Map = (props) => {
                                         key={x+420}
                                         
                                         style={{
-                                            background: `url(${tileset[sprite]}) -${tileType === bgTile ? bgTile.x : tile.v.x}px -${tileType === bgTile ? bgTile.y : tile.v.y}px no-repeat`,
+                                            background: 
+                                                `url(${tileset[sprite]}) -${spriteRenderOptions(tileType, tile).xPos}px -${spriteRenderOptions(tileType, tile).yPos}px no-repeat`,
                                             width: 32,
                                             height: 32,
 
@@ -40,8 +62,12 @@ const Map = (props) => {
                     </div>
                 )
             }
+            <div>
+                <button onClick={() => setIsHome(true)}>Return Home</button>
+            </div>
         </div>
-    )
+        
+    }
 
     return (
         
@@ -52,15 +78,12 @@ const Map = (props) => {
                 width: mapSize.width,
             }}
         >
-            <DropdownComponent 
-                className="dropdown-layout-div" 
-                userSelectedMapFile={userSelectedMapFile}
-                setMapFile={setMapFile}
-            />
-            {/* Background Layer */}
-            {/* {renderTileLayers(bgTile)} */}
+            
             {/* Foreground layer */}
             {renderTileLayers("notBgTile")}
+            {/* Background Layer */}
+            {renderTileLayers(bgTile)}
+            
             {props.children}
             
         </div>

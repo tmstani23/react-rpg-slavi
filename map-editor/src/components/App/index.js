@@ -61,6 +61,7 @@ const App = () => {
             activeTile={activeTile}
             setActiveTile={setActiveTile}
             setBgTile={setBgTile}
+            bgTile={bgTile}
             mapTiles={tiles}
         />
 

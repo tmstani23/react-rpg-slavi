@@ -21,9 +21,14 @@ X - create map name selector component
     
 -display tiles
     x - read tiles obj to get correct sprite map
-        - create reset display function that clears all previously rendered tiles
-- create background layer functionality
+        X create reset display function that clears all previously rendered tiles
+X- create background layer functionality
+    X-add bgtile hook in app
+    X-set bgtile when map comes back
+    X-render bg-tile layer in map
 - create separate map select component that runs before initial map render
+    - create back button
+        reset isHome state in dropdown comp
 
 add dynamic production/dev paths to fetch calls    
 add collision boundaries to object tiles

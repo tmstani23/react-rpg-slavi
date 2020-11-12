@@ -9,7 +9,8 @@ const tilesetData = require('../../data/tilesets.json');
 
 const TilePalette = ({
     position,
-    setBgTile, 
+    setBgTile,
+    bgTile, 
     tileset,
     mapTiles, 
     activeTile, 
@@ -144,7 +145,8 @@ const TilePalette = ({
         //add sprite to map object
         let jsonMap = {
             tileSetSprite: sprite,
-            mapTiles
+            mapTiles,
+            bgTile,
         }
         
 
