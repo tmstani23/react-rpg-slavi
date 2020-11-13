@@ -2,13 +2,17 @@ import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
+
+
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
 const tilesetData = require('../../data/tilesets.json');
 
 const TilePalette = ({
     position,
-    setBgTile, 
-    tileset, 
+    setBgTile,
+    bgTile, 
+    tileset,
+    mapTiles, 
     activeTile, 
     setActiveTile,
     setSprite,
@@ -56,8 +60,9 @@ const TilePalette = ({
 
     const renderPaletteTiles = (tiles) => (
         
-        tiles.map((row, y) => 
+        tiles.map((row, y, index) => 
             <div 
+                key={y+420+index}
                 style={{
                     display: "flex"
                 }}
@@ -65,6 +70,7 @@ const TilePalette = ({
                 {
                     row.map((tile, x) => 
                     <div 
+                        key={x+420+index}
                         onClick={() => setActiveTile({
                                 x: x * 32,
                                 y: y * 32
@@ -96,7 +102,7 @@ const TilePalette = ({
                 <Dropdown 
                     options={tilesetsJson}
                     onChange={(tileset) => {
-                        console.log(tileset)
+                        //console.log(tileset)
                         setSprite(tileset.label)
                         }
                     }
@@ -110,6 +116,12 @@ const TilePalette = ({
                         
                     >
                         Fill Background
+                    </button>
+                    <button 
+                        onClick={() => saveMapFile(mapTiles)}
+                        
+                    >
+                        Export Map
                     </button>
             </div>
             
@@ -127,6 +139,40 @@ const TilePalette = ({
             }}
         />
     )
+
+    const saveMapFile = (mapTiles) => {
+
+        //add sprite to map object
+        let jsonMap = {
+            tileSetSprite: sprite,
+            mapTiles,
+            bgTile,
+        }
+        
+
+        //console.log(jsonMap);
+
+        let data = JSON.stringify(jsonMap, null, 4);
+        
+        //console.log(data);
+
+        fetch('http://localhost:3002/api/maps', {
+            method: 'POST',
+            headers: {
+            'Content-type': 'application/json'
+            }, 
+            body: data,
+          })
+            .then(res => res.json())
+            .then(res => {
+              
+              console.log(res, "afterfetch response")
+              
+            })
+            .catch(err => console.log(err))
+        
+        
+    }
 
     const renderPalette = () => {
         const tiles = generatePaletteTileMatrix();

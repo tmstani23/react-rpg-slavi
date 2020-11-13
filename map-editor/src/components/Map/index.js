@@ -9,6 +9,7 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
         for (let i = 0; i < matrix.length; i++) {
             // slice whole row into cloned row
             clone[i] = matrix[i].slice(0)
+            //console.log(clone[i], "clone in cloneMatrix");
         }
         return clone;
     } 
@@ -16,15 +17,20 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
     const dropTile = ({x, y}) => {
         setTiles(prev => {
             // clone prev matrix
+            
             const clone = cloneMatrix(prev);
             // alter tile 0 x/y to active tile
+
+            //console.log(sprite);
             const tile = {
                 // copy entire tile at xy location and update value to active tile state
                 ...clone[y][x],
-                v: activeTile
+                v: activeTile,
+                tileSprite: sprite
             }
             //swap in active tile to the cloned matrix and return it
             clone[y][x] = tile;
+            //console.log(clone[y][x])
             return clone;
         })
     }
@@ -38,18 +44,19 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
             {
                 tiles.map((row, y) => 
                     <div
+                        key={y+420}
                         style={{display: "flex"}}
                     > 
                         {
                             row.map((tile, x) => {
                                 return (
                                     <div
+                                        key={x+420}
                                         onClick={() => dropTile({x, y})}
-
                                         style={{
                                             borderTop: "1px solid black",
                                             borderRight: "1px solid black",
-                                            background: `url(${tileset[sprite]}) -${eval(tileType).x}px -${eval(tileType).y}px no-repeat`,
+                                            background: `url(${tileset[sprite]}) -${tileType === bgTile ? bgTile.x : tile.v.x}px -${tileType === bgTile ? bgTile.y : tile.v.y}px no-repeat`,
                                             width: 32,
                                             height: 32,
 
@@ -57,11 +64,7 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
                                     >
                                     </div>
                                 )
-                            }
-                            
-
-                            
-                            )
+                            })
                         }
                     </div>
                 )
@@ -81,7 +84,8 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
          {/* Background Layer */}
         {renderTileLayers(bgTile)}
         {/* Foreground layer */}
-        {renderTileLayers("tile.v")}
+        {renderTileLayers("notBgTile")}
+        
         
     </div>
 )}

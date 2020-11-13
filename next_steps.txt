@@ -1,0 +1,39 @@
+X - add sprite tag to tile
+    
+X - export map to json object
+    X add sprite to exported Json object
+     
+X-convert tiles to json in tilepallet component
+X-write json string to file in node
+    X add current Time and sprite to filename:
+
+X create map component in main app
+
+X - create get filenames route on server
+
+x - fetch list of map names in maps directory from server
+        X- hookup route on frontend and test
+
+X - create map name selector component
+    X - Create map name selector dropdown
+        x - link selected map to display tiles component
+        x - fetch map from server
+    
+-display tiles
+    x - read tiles obj to get correct sprite map
+        X create reset display function that clears all previously rendered tiles
+X- create background layer functionality
+    X-add bgtile hook in app
+    X-set bgtile when map comes back
+    X-render bg-tile layer in map
+X - create separate map select component that runs before initial map render
+    X- create back button
+        X- reset isHome state in dropdown comp
+    - style map select component
+
+add dynamic production/dev paths to fetch calls    
+add collision boundaries to object tiles
+add collision logic to player interacting with map
+add basic items to map
+add enemies to map
+add basic health and damage system

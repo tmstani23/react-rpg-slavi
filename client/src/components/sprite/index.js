@@ -9,6 +9,7 @@ const Sprite = ({spriteImage, position, data}) => {
     return (
         <div
             style={{
+                zIndex: 2,
                 position: "absolute",
                 // top andd left are position of the sprite on the screen
                 top: position.y,
