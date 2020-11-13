@@ -26,9 +26,10 @@ X- create background layer functionality
     X-add bgtile hook in app
     X-set bgtile when map comes back
     X-render bg-tile layer in map
-- create separate map select component that runs before initial map render
-    - create back button
-        reset isHome state in dropdown comp
+X - create separate map select component that runs before initial map render
+    X- create back button
+        X- reset isHome state in dropdown comp
+    - style map select component
 
 add dynamic production/dev paths to fetch calls    
 add collision boundaries to object tiles

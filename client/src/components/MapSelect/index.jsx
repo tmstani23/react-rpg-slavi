@@ -8,6 +8,7 @@ const MapSelect = ({setMapFile, userSelectedMapFile, setIsHome}) => {
             <h2>Select your map</h2>
             <DropdownComponent 
                 setIsHome={setIsHome}
+                controlClassName='dropdown-control-custom'
                 className="dropdown-layout-div" 
                 userSelectedMapFile={userSelectedMapFile}
                 setMapFile={setMapFile}

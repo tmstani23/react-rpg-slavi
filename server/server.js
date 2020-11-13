@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 app.post('/api/get-map', (req, res) => {
   
   const mapFilename = req.body.mapFilename
-  console.log(mapFilename, "in get-map route")
+  //console.log(mapFilename, "in get-map route")
   const mapJson = readMapFile(mapFilename);
   //console.log(mapJson, 'mapJson in post route')
   res.send(mapJson)
@@ -63,7 +63,7 @@ const createMapFilename = (sprite) => {
     .replace(/:\s*/g, ".");
   const finalStr = `${dateString}_${timeStr.substring(0,timeStr.length-1)}`;
   const mapFileName = `${sprite}_map_${finalStr}.json`;
-  console.log(mapFileName, "mapfilename")
+  //console.log(mapFileName, "mapfilename")
 
   return mapFileName;
 }
@@ -76,7 +76,7 @@ const exportMapToFile = (jsonMap) => {
   const stringifiedJsonMap = JSON.stringify(jsonMap, null, 4);
   //const parsedJsonMap = JSON.parse(jsonMap.toString());
   const mapSprite = jsonMap["tileSetSprite"]
-  console.log(mapSprite)
+  //console.log(mapSprite)
   const mapName = createMapFilename(mapSprite);
   
   const mapPath = `${path.dirname(__filename)}/maps/${mapName}`;
@@ -94,20 +94,13 @@ const readMapFile = (mapFileName) => {
   let jsonMap = [];
   //mapFileName = "map1.json";
   const mapPath = `${path.dirname(__filename)}/maps/${mapFileName}`;
-  
   //console.log(mapPath);
-
-
   let stringMap = fs.readFileSync(mapPath, 'utf-8') 
-    
   //console.log(stringMap, "stringmap")
   // parse JSON object
   const parsedJsonMap = JSON.parse(stringMap.toString());
-
-  // print JSON object
   //console.log(parsedJsonMap, "parsedJsonmap");
-
-      
+ 
   return  parsedJsonMap;  
     
 }

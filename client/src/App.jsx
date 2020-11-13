@@ -57,8 +57,11 @@ function App() {
 return (
     <div className="zone-container">
       {isHome === true 
-        ? <MapSelect setIsHome={setIsHome} userSelectedMapFile = {userSelectedMapFile} setMapFile={setMapFile}/>
-        : <Map 
+        ? <div className="mapSelect-container-div">
+            <MapSelect setIsHome={setIsHome} userSelectedMapFile = {userSelectedMapFile} setMapFile={setMapFile}/>
+          </div>
+        : <div className="map-container-div">
+          <Map 
             setIsHome={setIsHome}
             tiles={tiles} 
             tileset={tileset} 
@@ -69,7 +72,9 @@ return (
             setBgTile={setBgTile}
           >
             <Player skin={maleSkin1} />
-          </Map> 
+          </Map>
+        </div>
+         
 
       }
       

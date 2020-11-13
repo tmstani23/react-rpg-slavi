@@ -7,7 +7,7 @@ const DropdownComponent = (props) => {
     const {userSelectedMapFile, setIsHome, setMapFile} = props
     const mapFileNames = getMapFilenames();
     //console.log(mapFileNames)
-    console.log(userSelectedMapFile);
+    //console.log(userSelectedMapFile);
     
     //let tileset = {springSprite: 'springSprite'}
     const options = mapFileNames;
