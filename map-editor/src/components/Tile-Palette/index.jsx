@@ -148,7 +148,9 @@ const TilePalette = ({
             mapTiles,
             bgTile,
         }
-        
+
+        const dynamicSaveMapUrl = process.env.NODE_ENV === 'production' ? '/api/maps' : 'http://localhost:3002/api/maps';
+        console.log(dynamicSaveMapUrl, 'dynamic url in tilePalette comp')
 
         //console.log(jsonMap);
 
@@ -156,7 +158,7 @@ const TilePalette = ({
         
         //console.log(data);
 
-        fetch('http://localhost:3002/api/maps', {
+        fetch(dynamicSaveMapUrl, {
             method: 'POST',
             headers: {
             'Content-type': 'application/json'

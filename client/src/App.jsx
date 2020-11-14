@@ -23,7 +23,11 @@ function App() {
   const fetchMap = (mapFilename) => {
     const data = JSON.stringify({mapFilename: mapFilename}, null, 4);
     console.log(data);
-    fetch('http://localhost:3002/api/get-map', {
+    const dynamicGetMapUrl = process.env.NODE_ENV === 'production' ? '/api/get-map' : 'http://localhost:3002/api/get-map';
+
+    console.log(dynamicGetMapUrl, "dynamicUrl in get-map-filenames hook main app")
+
+    fetch(dynamicGetMapUrl, {
       method: 'POST',
       headers: {
       'Content-type': 'application/json'

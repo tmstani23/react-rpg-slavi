@@ -29,7 +29,7 @@ X- create background layer functionality
 X - create separate map select component that runs before initial map render
     X- create back button
         X- reset isHome state in dropdown comp
-    - style map select component
+    X style map select component
 
 add dynamic production/dev paths to fetch calls    
 add collision boundaries to object tiles
