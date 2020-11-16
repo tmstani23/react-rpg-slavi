@@ -31,7 +31,7 @@ X - create separate map select component that runs before initial map render
         X- reset isHome state in dropdown comp
     X style map select component
 
-add dynamic production/dev paths to fetch calls    
+X - add dynamic production/dev paths to fetch calls    
 add collision boundaries to object tiles
 add collision logic to player interacting with map
 add basic items to map

@@ -1,0 +1,27 @@
+{
+  "name": "react-rpg-slavi",
+  "version": "1.0.0",
+  "description": "A simple rpg, created with ReactJs for the browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmstani23/react-rpg-slavi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tmstani23/react-rpg-slavi/issues"
+  },
+  "homepage": "https://github.com/tmstani23/react-rpg-slavi#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
