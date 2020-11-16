@@ -84,8 +84,8 @@ button:hover {
   box-sizing: border-box;
   border: 1px solid grey;
   margin: 0.5rem auto;
-  width: 1000px;
-  height: 700px;
+  width: 800px;
+  height: 800px;
   font-size: 1rem;
   position: relative;
   overflow: hidden;
@@ -98,7 +98,7 @@ button:hover {
 .map-container-div {
   border: 1px solid grey;
   display: flex;
-  justify-content: center;
+  
 }
 .row {
   display: "flex";

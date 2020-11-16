@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 const useWalk = (maxSteps) => {
-    // [getter/setter] = useState(default)
+    // player position, direction and step in animation sequence
     const [position, setPos] = useState({x: 0, y: 0});
     const [dir, setDir] = useState(0);
     const [step, setStep] = useState(0);
@@ -23,15 +23,30 @@ const useWalk = (maxSteps) => {
         up: {x: 0, y: -stepSize},
     }
 
+    const checkIfReachedBoundary = (playerPos, dir) => {
+        const {x, y} = playerPos;
+        const mapBoundaries = {
+            top: `${x + walkDistanceModifier[dir].x >= 0 && y + walkDistanceModifier[dir].y <= 0}`,
+            right: `${x + walkDistanceModifier[dir].x >= 765 && y + walkDistanceModifier[dir].y  >= 0}`,
+            bottom: `${x + walkDistanceModifier[dir].x <= 765 && y + walkDistanceModifier[dir].y  >= 565}`,
+            left: `${x + walkDistanceModifier[dir].x <= 0 && y + walkDistanceModifier[dir].y  <= 565}`,
+        }
+        //check if any of the boundaries have been reached and if so return true
+        console.log(mapBoundaries.top, position);
+    }
+
     //sets the sprite x/y position on screen and selects which step in the sprite spritesheet to render
     const walk = (dir) => {
         
 
         //set direction integers from hashmap into Dir state
         setDir(prev => {
-            //if current direction matches the previous direction then move else just turn
+            //if current direction matches the previous direction then move else remain facing same dir
             if(directionsHash[dir] === prev) {
-                 move(dir)
+                //check if reached any map boundary 
+                checkIfReachedBoundary(position, dir)
+                //else
+                    move(dir)
             }
             return directionsHash[dir]
         });

@@ -19,7 +19,7 @@ X - create map name selector component
         x - link selected map to display tiles component
         x - fetch map from server
     
--display tiles
+X -display tiles
     x - read tiles obj to get correct sprite map
         X create reset display function that clears all previously rendered tiles
 X- create background layer functionality
@@ -31,7 +31,17 @@ X - create separate map select component that runs before initial map render
         X- reset isHome state in dropdown comp
     X style map select component
 
-X - add dynamic production/dev paths to fetch calls    
+X - add dynamic production/dev paths to fetch calls 
+
+-Stop player from moving outside map boundaries
+    X- get players current position
+    X- check if player is outside map width or height
+        X- create a boundary check function 
+            - check if player pos is < x/y positions for each side of the map
+        - if outside width: subtract prev x movement from current move calculation
+        - if outside height subtract prev y movement from current move calculation
+
+
 add collision boundaries to object tiles
 add collision logic to player interacting with map
 add basic items to map

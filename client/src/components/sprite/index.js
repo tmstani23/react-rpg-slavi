@@ -5,7 +5,7 @@ import '../../resources/styles.css';
 const Sprite = ({spriteImage, position, data}) => {
     
     const {x, y, h , w} = data;
-    
+    //console.log(position);
     return (
         <div
             style={{
