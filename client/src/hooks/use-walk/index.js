@@ -25,14 +25,26 @@ const useWalk = (maxSteps) => {
 
     const checkIfReachedBoundary = (playerPos, dir) => {
         const {x, y} = playerPos;
+        let failedBoundaryCheck = '';
         const mapBoundaries = {
-            top: `${x + walkDistanceModifier[dir].x >= 0 && y + walkDistanceModifier[dir].y <= 0}`,
-            right: `${x + walkDistanceModifier[dir].x >= 765 && y + walkDistanceModifier[dir].y  >= 0}`,
-            bottom: `${x + walkDistanceModifier[dir].x <= 765 && y + walkDistanceModifier[dir].y  >= 565}`,
-            left: `${x + walkDistanceModifier[dir].x <= 0 && y + walkDistanceModifier[dir].y  <= 565}`,
+            top: `${x + walkDistanceModifier[dir].x > 0 && y + walkDistanceModifier[dir].y < 0}`,
+            right: `${x + walkDistanceModifier[dir].x > 765 && y + walkDistanceModifier[dir].y  > 0}`,
+            bottom: `${x + walkDistanceModifier[dir].x < 765 && y + walkDistanceModifier[dir].y  > 565}`,
+            left: `${x + walkDistanceModifier[dir].x < 0 && y + walkDistanceModifier[dir].y  < 565}`,
         }
+        
         //check if any of the boundaries have been reached and if so return true
-        console.log(mapBoundaries.top, position);
+        for(const key in mapBoundaries) {
+            console.log(mapBoundaries[key], key, "key in mapBoundaries")
+            if(mapBoundaries[key] === 'true') {
+                failedBoundaryCheck = true;
+            } 
+            
+        }
+        
+        //console.log(mapBoundaries.top, position);
+        console.log(failedBoundaryCheck)
+        return failedBoundaryCheck;
     }
 
     //sets the sprite x/y position on screen and selects which step in the sprite spritesheet to render
@@ -44,9 +56,16 @@ const useWalk = (maxSteps) => {
             //if current direction matches the previous direction then move else remain facing same dir
             if(directionsHash[dir] === prev) {
                 //check if reached any map boundary 
-                checkIfReachedBoundary(position, dir)
-                //else
+                
+                //console.log(checkIfReachedBoundary(position, dir));
+                if(checkIfReachedBoundary(position, dir) !== true){
+                    console.log('check working')
                     move(dir)
+                } 
+
+                //else don't move
+                
+                    
             }
             return directionsHash[dir]
         });
