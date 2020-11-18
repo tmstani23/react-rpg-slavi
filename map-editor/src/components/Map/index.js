@@ -39,13 +39,14 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
         
         <div style={{
             position: "absolute",
-            zIndex: 1
+            zIndex: 1,
+            borderBottom: "1px solid black"
         }}>
             {
                 tiles.map((row, y) => 
                     <div
                         key={y+420}
-                        style={{display: "flex"}}
+                        style={{display: "flex", width: mapSize.width}}
                     > 
                         {
                             row.map((tile, x) => {

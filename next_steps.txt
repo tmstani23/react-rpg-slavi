@@ -38,11 +38,21 @@ X - add dynamic production/dev paths to fetch calls
     X- check if player is outside map width or height
         X- create a boundary check function 
             - check if player pos is < x/y positions for each side of the map
-        - if outside width: subtract prev x movement from current move calculation
-        - if outside height subtract prev y movement from current move calculation
+    X - prevent player from moving if boundry check fails
 
+- add collision boundaries to object tiles
+    -add passable/impass flag to each tile obj that isn't a bg tile
+        - create impassable tile flag that can be switched on with button click
+            - use active tile function to add impassable state to tile obj
+            -use clone matrix functionality to copy the tiles and update them with the new impassable tile 
+                - see dropTile function in map for reference
+    -loop through all non-bg tiles before player move
+        -check if tile is passable
+        -if not passable
+            run tile boundary check function
+                -check current position against all sides of the tile
+                    -iff check passes allow movement
 
-add collision boundaries to object tiles
 add collision logic to player interacting with map
 add basic items to map
 add enemies to map

@@ -129,16 +129,29 @@ const TilePalette = ({
         
     )
 
-    const renderActiveTile = () => (
-        <div 
-            style={{
-                background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
-                width: 32,
-                height: 32,
+    const renderActiveTile = () => {
+        console.log( 
+            <div 
+                style={{
+                    background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
+                    width: 32,
+                    height: 32,
 
-            }}
-        />
-    )
+                }}
+            />
+        )
+        return (
+            <div 
+                style={{
+                    background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
+                    width: 32,
+                    height: 32,
+
+                }}
+            />
+        )
+        
+    }
 
     const saveMapFile = (mapTiles) => {
 

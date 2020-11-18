@@ -27,23 +27,22 @@ const useWalk = (maxSteps) => {
         const {x, y} = playerPos;
         let failedBoundaryCheck = '';
         const mapBoundaries = {
-            top: `${x + walkDistanceModifier[dir].x > 0 && y + walkDistanceModifier[dir].y < 0}`,
-            right: `${x + walkDistanceModifier[dir].x > 765 && y + walkDistanceModifier[dir].y  > 0}`,
-            bottom: `${x + walkDistanceModifier[dir].x < 765 && y + walkDistanceModifier[dir].y  > 565}`,
-            left: `${x + walkDistanceModifier[dir].x < 0 && y + walkDistanceModifier[dir].y  < 565}`,
+            top: `${x + walkDistanceModifier[dir].x >= -10 && y + walkDistanceModifier[dir].y <= -10}`,
+            right: `${x + walkDistanceModifier[dir].x >= 780 && y + walkDistanceModifier[dir].y  >= -10}`,
+            bottom: `${x + walkDistanceModifier[dir].x <= 780 && y + walkDistanceModifier[dir].y  >= 580}`,
+            left: `${x + walkDistanceModifier[dir].x <= -10 && y + walkDistanceModifier[dir].y  <= 580}`,
         }
         
         //check if any of the boundaries have been reached and if so return true
         for(const key in mapBoundaries) {
-            console.log(mapBoundaries[key], key, "key in mapBoundaries")
+            //console.log(mapBoundaries[key], key, "key in mapBoundaries")
             if(mapBoundaries[key] === 'true') {
                 failedBoundaryCheck = true;
             } 
             
         }
-        
         //console.log(mapBoundaries.top, position);
-        console.log(failedBoundaryCheck)
+        //console.log(failedBoundaryCheck)
         return failedBoundaryCheck;
     }
 
@@ -55,16 +54,13 @@ const useWalk = (maxSteps) => {
         setDir(prev => {
             //if current direction matches the previous direction then move else remain facing same dir
             if(directionsHash[dir] === prev) {
-                //check if reached any map boundary 
-                
+                //check if havent reached boundary 
                 //console.log(checkIfReachedBoundary(position, dir));
                 if(checkIfReachedBoundary(position, dir) !== true){
-                    console.log('check working')
                     move(dir)
+                } else {
+                    return;
                 } 
-
-                //else don't move
-                
                     
             }
             return directionsHash[dir]
