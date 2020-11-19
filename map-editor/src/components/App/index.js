@@ -33,7 +33,7 @@ const App = () => {
                     x,
                     y,
                     id: id++,
-                    v: { x: -32, y: -32 },
+                    v: { x: -32, y: -32, isPassable: true },
                 })
             }
             _tiles.push(row);

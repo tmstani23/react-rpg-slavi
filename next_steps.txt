@@ -33,7 +33,7 @@ X - create separate map select component that runs before initial map render
 
 X - add dynamic production/dev paths to fetch calls 
 
--Stop player from moving outside map boundaries
+X-Stop player from moving outside map boundaries
     X- get players current position
     X- check if player is outside map width or height
         X- create a boundary check function 
@@ -41,11 +41,12 @@ X - add dynamic production/dev paths to fetch calls
     X - prevent player from moving if boundry check fails
 
 - add collision boundaries to object tiles
-    -add passable/impass flag to each tile obj that isn't a bg tile
-        - create impassable tile flag that can be switched on with button click
-            - use active tile function to add impassable state to tile obj
-            -use clone matrix functionality to copy the tiles and update them with the new impassable tile 
-                - see dropTile function in map for reference
+    -add passable flag to each tile obj that is a bg tile
+    X - create impassable tile flag that can be switched on with toggle
+    x - use active tile function to add impassable state to active tile obj
+    - Set isPassable state to all tiles on creation to true
+        - verify if working
+        
     -loop through all non-bg tiles before player move
         -check if tile is passable
         -if not passable

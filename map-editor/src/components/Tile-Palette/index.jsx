@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
@@ -20,6 +20,9 @@ const TilePalette = ({
 }) => {
     
     // Global variables
+    //Initialize passable state
+    const [impassableTile, setImpassableTile] = useState(false);
+
     const tilesetsJson = Object.keys(tilesetData).map (set => ({
         type: "group",
         name: set.replace(/~/g, " "),
@@ -29,6 +32,7 @@ const TilePalette = ({
         }))
     }))
     //console.log(tilesetsJson)
+    
 
     const tilesetGroup = {...tilesetsJson[0]}
     //console.log(tilesetGroup);
@@ -49,6 +53,7 @@ const TilePalette = ({
                     x, 
                     y, 
                     tileId: tileId++
+                    // could add default passable:true state here
                 })
             }
 
@@ -56,6 +61,14 @@ const TilePalette = ({
 
         }
         return tiles;
+    }
+
+    const handlePassableToggle = (event, impassableTile) => {
+        //get event status
+        const toggleChecked = event.target.checked;
+        //update passable state based on event state
+        setImpassableTile(toggleChecked);
+        console.log(impassableTile);
     }
 
     const renderPaletteTiles = (tiles) => (
@@ -68,21 +81,27 @@ const TilePalette = ({
                 }}
             > 
                 {
-                    row.map((tile, x) => 
-                    <div 
-                        key={x+420+index}
-                        onClick={() => setActiveTile({
-                                x: x * 32,
-                                y: y * 32
-                        })}
-                        style={{
-                            borderTop: "1px solid black",
-                            borderRight: "1px solid black",
-                            background: `url(${tileset[sprite]}) -${x*32}px -${y*32}px no-repeat`,
-                            width: 32,
-                            height: 32,
-                        }}
-                    />)
+                    row.map((tile, x) => {
+                        
+                        return (
+                            <div 
+                                key={x+420+index}
+                                onClick={() => setActiveTile({
+                                        x: x * 32,
+                                        y: y * 32,
+                                        isPassable: impassableTile
+                                })}
+                                style={{
+                                    borderTop: "1px solid black",
+                                    borderRight: "1px solid black",
+                                    background: `url(${tileset[sprite]}) -${x*32}px -${y*32}px no-repeat`,
+                                    width: 32,
+                                    height: 32,
+                                }}
+                            />
+                        )
+                    })
+                   
                 }
             </div>
         )
@@ -90,14 +109,21 @@ const TilePalette = ({
     )
     const renderDragHandle = () => (
         <div style={{display: "flex", margin: 4}}>
+            
+            {/* drag handle image */}
             <img        
             id="handle"
             src={dragHandleImg} 
             alt=""
             />
+            
+            {/* Active tile icon */}
             <div style={{position: "relative", width: 32, marginLeft: 8}}>
                 {renderActiveTile()}
+                
             </div>
+            
+            {/* Map tileset selection dropdown*/}
             <div style={{width: 200, marginLeft: 8}}>
                 <Dropdown 
                     options={tilesetsJson}
@@ -109,7 +135,8 @@ const TilePalette = ({
                     value={tileset}
                 />
             </div>
-
+            
+            {/* Active buttons and selectors */}
             <div style={{width: 200, marginLeft: 8}}> 
                     <button 
                         onClick={() => setBgTile(activeTile)}
@@ -123,6 +150,11 @@ const TilePalette = ({
                     >
                         Export Map
                     </button>
+                    <div>
+                        <label for="male">Active Tile Impassable</label>
+                        <input type="checkbox" name="impassableTile-checkbox" onClick={(event) => handlePassableToggle(event, impassableTile)}></input>
+                    </div>
+                    
             </div>
             
         </div>
@@ -130,22 +162,14 @@ const TilePalette = ({
     )
 
     const renderActiveTile = () => {
-        console.log( 
-            <div 
-                style={{
-                    background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
-                    width: 32,
-                    height: 32,
-
-                }}
-            />
-        )
+        // dynamic border based on if tile is passable or not
         return (
             <div 
                 style={{
                     background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
                     width: 32,
                     height: 32,
+                    border: `${impassableTile ? "2px solid red" : "1px solid black"}`
 
                 }}
             />
