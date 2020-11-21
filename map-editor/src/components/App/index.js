@@ -15,12 +15,14 @@ const App = () => {
         fallSprite,
         winterSprite
     });
+    //Initialize passable state
+    const [impassableTile, setImpassableTile] = useState(true);
     const [sprite, setSprite] = useState("springSprite");
-    const [activeTile, setActiveTile] = useState({x: 1 * 32, y: 4 * 32})
     const [tiles, setTiles] = useState([]);
     const mapSize = {width: 800, height: 600};
-    const [bgTile, setBgTile] = useState({x: -32, y: -32})
+    const [bgTile, setBgTile] = useState({x: -32, y: -32, v: { x: -32, y: -32, isImpassable: false }})
     const {position} = useDraggable("handle");
+    const [activeTile, setActiveTile] = useState({x: 1 * 32, y: 4 * 32, v: { x: -32, y: -32, isImpassable: false }})
 
     useEffect(() => {
         const _tiles = [];
@@ -33,7 +35,7 @@ const App = () => {
                     x,
                     y,
                     id: id++,
-                    v: { x: -32, y: -32, isPassable: true },
+                    v: { x: -32, y: -32, isImpassable: false },
                 })
             }
             _tiles.push(row);
@@ -63,6 +65,8 @@ const App = () => {
             setBgTile={setBgTile}
             bgTile={bgTile}
             mapTiles={tiles}
+            impassableTile={impassableTile}
+            setImpassableTile={setImpassableTile}
         />
 
         <Map 

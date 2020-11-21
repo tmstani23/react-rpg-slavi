@@ -16,12 +16,14 @@ const TilePalette = ({
     activeTile, 
     setActiveTile,
     setSprite,
-    sprite
+    sprite,
+    impassableTile,
+    setImpassableTile
 }) => {
     
     // Global variables
-    //Initialize passable state
-    const [impassableTile, setImpassableTile] = useState(false);
+    //const [activeTileSelected, setActiveTileSelected] = useState(false);
+    
 
     const tilesetsJson = Object.keys(tilesetData).map (set => ({
         type: "group",
@@ -52,7 +54,8 @@ const TilePalette = ({
                 row.push({
                     x, 
                     y, 
-                    tileId: tileId++
+                    tileId: tileId++,
+                    v: { x: -32, y: -32, isImpassable: false }
                     // could add default passable:true state here
                 })
             }
@@ -68,7 +71,10 @@ const TilePalette = ({
         const toggleChecked = event.target.checked;
         //update passable state based on event state
         setImpassableTile(toggleChecked);
-        console.log(impassableTile);
+        //Update the active tile with the new impassable state
+        //setActiveTileSelected(!activeTileSelected);
+        
+        //console.log(`not ${!impassableTile}, is impass: ${impassableTile}`);
     }
 
     const renderPaletteTiles = (tiles) => (
@@ -86,11 +92,17 @@ const TilePalette = ({
                         return (
                             <div 
                                 key={x+420+index}
-                                onClick={() => setActiveTile({
-                                        x: x * 32,
-                                        y: y * 32,
-                                        isPassable: impassableTile
-                                })}
+                                onClick={
+                                    () => {
+                                        setActiveTile({
+                                            x: x * 32,
+                                            y: y * 32,
+                                            v: { x: -32, y: -32, isImpassable: impassableTile }
+                                        
+                                        })
+                                        //setActiveTileSelected(!activeTileSelected)
+                                    }
+                                }
                                 style={{
                                     borderTop: "1px solid black",
                                     borderRight: "1px solid black",
@@ -98,7 +110,10 @@ const TilePalette = ({
                                     width: 32,
                                     height: 32,
                                 }}
-                            />
+                            >
+                                
+                            </div>
+                            
                         )
                     })
                    
@@ -120,6 +135,19 @@ const TilePalette = ({
             {/* Active tile icon */}
             <div style={{position: "relative", width: 32, marginLeft: 8}}>
                 {renderActiveTile()}
+                {/* {
+                    activeTileSelected ? 
+                        <div>
+                            <label for="male">Active Tile Impassable</label>
+                            <input type="checkbox" name="impassableTile-checkbox" onClick={(event) => handlePassableToggle(event, impassableTile)}></input>
+                        </div>
+                    : null
+                } */}
+                <div>
+                            <label for="male">Active Tile Impassable</label>
+                            <input type="checkbox" name="impassableTile-checkbox" onClick={(event) => handlePassableToggle(event, impassableTile)}></input>
+                        </div>
+                
                 
             </div>
             
@@ -150,10 +178,7 @@ const TilePalette = ({
                     >
                         Export Map
                     </button>
-                    <div>
-                        <label for="male">Active Tile Impassable</label>
-                        <input type="checkbox" name="impassableTile-checkbox" onClick={(event) => handlePassableToggle(event, impassableTile)}></input>
-                    </div>
+                    
                     
             </div>
             
@@ -169,7 +194,7 @@ const TilePalette = ({
                     background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
                     width: 32,
                     height: 32,
-                    border: `${impassableTile ? "2px solid red" : "1px solid black"}`
+                    border: `${activeTile['v'].isImpassable ? "2px solid red" : "1px solid black"}`
 
                 }}
             />
