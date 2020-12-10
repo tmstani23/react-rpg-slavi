@@ -19,7 +19,7 @@ X - create map name selector component
         x - link selected map to display tiles component
         x - fetch map from server
     
--display tiles
+X -display tiles
     x - read tiles obj to get correct sprite map
         X create reset display function that clears all previously rendered tiles
 X- create background layer functionality
@@ -29,10 +29,31 @@ X- create background layer functionality
 X - create separate map select component that runs before initial map render
     X- create back button
         X- reset isHome state in dropdown comp
-    - style map select component
+    X style map select component
 
-add dynamic production/dev paths to fetch calls    
-add collision boundaries to object tiles
+X - add dynamic production/dev paths to fetch calls 
+
+X-Stop player from moving outside map boundaries
+    X- get players current position
+    X- check if player is outside map width or height
+        X- create a boundary check function 
+            - check if player pos is < x/y positions for each side of the map
+    X - prevent player from moving if boundry check fails
+
+- add collision boundaries to object tiles
+    -add passable flag to each tile obj that is a bg tile
+    X - create impassable tile flag that can be switched on with toggle
+    x - use active tile function to add impassable state to active tile obj
+    X Set isPassable state to all tiles on creation to true
+        X verify if working
+        
+    -loop through all non-bg tiles before player move
+        -check if tile is passable
+        -if not passable
+            run tile boundary check function
+                -check current position against all sides of the tile
+                    -iff check passes allow movement
+
 add collision logic to player interacting with map
 add basic items to map
 add enemies to map

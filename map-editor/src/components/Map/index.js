@@ -26,7 +26,8 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
                 // copy entire tile at xy location and update value to active tile state
                 ...clone[y][x],
                 v: activeTile,
-                tileSprite: sprite
+                defaultTile: false,
+                selectedTile: true
             }
             //swap in active tile to the cloned matrix and return it
             clone[y][x] = tile;
@@ -39,13 +40,14 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
         
         <div style={{
             position: "absolute",
-            zIndex: 1
+            zIndex: 1,
+            borderBottom: "1px solid black"
         }}>
             {
                 tiles.map((row, y) => 
                     <div
                         key={y+420}
-                        style={{display: "flex"}}
+                        style={{display: "flex", width: mapSize.width}}
                     > 
                         {
                             row.map((tile, x) => {

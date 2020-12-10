@@ -17,6 +17,9 @@ const Map = (props) => {
         
         zIndexVar = tileType === bgTile ? zIndexVar = 0 : zIndexVar = 1;
 
+        //View active map tiles
+        //console.log(tiles);
+
         return {
             xPos,
             yPos,

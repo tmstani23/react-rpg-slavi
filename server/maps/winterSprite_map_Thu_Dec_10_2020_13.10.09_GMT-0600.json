@@ -7,20 +7,22 @@
                 "y": 0,
                 "id": 0,
                 "v": {
-                    "x": 0,
-                    "y": 0
+                    "x": -32,
+                    "y": -32,
+                    "isImpassable": false
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": true
             },
             {
                 "x": 32,
                 "y": 0,
                 "id": 1,
                 "v": {
-                    "x": 0,
-                    "y": 96
+                    "x": -32,
+                    "y": -32,
+                    "isImpassable": false
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -28,55 +30,71 @@
                 "id": 2,
                 "v": {
                     "x": 32,
-                    "y": 96
+                    "y": 32,
+                    "isImpassable": true
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 96,
                 "y": 0,
                 "id": 3,
                 "v": {
-                    "x": 64,
-                    "y": 96
+                    "x": 32,
+                    "y": 64,
+                    "isImpassable": false
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 128,
                 "y": 0,
                 "id": 4,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 64,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 160,
                 "y": 0,
                 "id": 5,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 64,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 192,
                 "y": 0,
                 "id": 6,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 64,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 224,
                 "y": 0,
                 "id": 7,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 256,
@@ -84,8 +102,10 @@
                 "id": 8,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -93,8 +113,10 @@
                 "id": 9,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -102,8 +124,10 @@
                 "id": 10,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -111,8 +135,10 @@
                 "id": 11,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -120,8 +146,10 @@
                 "id": 12,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -129,8 +157,10 @@
                 "id": 13,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -138,8 +168,10 @@
                 "id": 14,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -147,8 +179,10 @@
                 "id": 15,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -156,8 +190,10 @@
                 "id": 16,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -165,8 +201,10 @@
                 "id": 17,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -174,8 +212,10 @@
                 "id": 18,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -183,8 +223,10 @@
                 "id": 19,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -192,8 +234,10 @@
                 "id": 20,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -201,8 +245,10 @@
                 "id": 21,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -210,8 +256,10 @@
                 "id": 22,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -219,8 +267,10 @@
                 "id": 23,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -228,8 +278,10 @@
                 "id": 24,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -238,20 +290,23 @@
                 "y": 32,
                 "id": 25,
                 "v": {
-                    "x": 0,
-                    "y": 32
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 32,
                 "y": 32,
                 "id": 26,
                 "v": {
-                    "x": 0,
-                    "y": 128
+                    "x": -32,
+                    "y": -32,
+                    "isImpassable": false
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -259,45 +314,58 @@
                 "id": 27,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
                 "y": 32,
                 "id": 28,
                 "v": {
-                    "x": 64,
-                    "y": 128
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 128,
                 "y": 32,
                 "id": 29,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 160,
                 "y": 32,
                 "id": 30,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 192,
                 "y": 32,
                 "id": 31,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 224,
@@ -305,8 +373,10 @@
                 "id": 32,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -314,8 +384,10 @@
                 "id": 33,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -323,8 +395,10 @@
                 "id": 34,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -332,8 +406,10 @@
                 "id": 35,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -341,8 +417,10 @@
                 "id": 36,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -350,8 +428,10 @@
                 "id": 37,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -359,8 +439,10 @@
                 "id": 38,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -368,8 +450,10 @@
                 "id": 39,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -377,8 +461,10 @@
                 "id": 40,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -386,8 +472,10 @@
                 "id": 41,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -395,8 +483,10 @@
                 "id": 42,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -404,8 +494,10 @@
                 "id": 43,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -413,8 +505,10 @@
                 "id": 44,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -422,8 +516,10 @@
                 "id": 45,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -431,8 +527,10 @@
                 "id": 46,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -440,8 +538,10 @@
                 "id": 47,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -449,8 +549,10 @@
                 "id": 48,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -458,8 +560,10 @@
                 "id": 49,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -468,48 +572,60 @@
                 "y": 64,
                 "id": 50,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 64,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 32,
                 "y": 64,
                 "id": 51,
                 "v": {
-                    "x": 0,
-                    "y": 160
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 64,
                 "y": 64,
                 "id": 52,
                 "v": {
-                    "x": 32,
-                    "y": 160
+                    "x": 0,
+                    "y": 96,
+                    "isImpassable": false
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 96,
                 "y": 64,
                 "id": 53,
                 "v": {
-                    "x": 64,
-                    "y": 160
+                    "x": 32,
+                    "y": 96,
+                    "isImpassable": false
                 },
-                "tileSprite": "winterSprite"
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 128,
                 "y": 64,
                 "id": 54,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 64,
+                    "y": 96,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 160,
@@ -517,8 +633,10 @@
                 "id": 55,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -526,8 +644,10 @@
                 "id": 56,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -535,8 +655,10 @@
                 "id": 57,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -544,8 +666,10 @@
                 "id": 58,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -553,8 +677,10 @@
                 "id": 59,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -562,8 +688,10 @@
                 "id": 60,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -571,8 +699,10 @@
                 "id": 61,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -580,8 +710,10 @@
                 "id": 62,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -589,8 +721,10 @@
                 "id": 63,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -598,8 +732,10 @@
                 "id": 64,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -607,8 +743,10 @@
                 "id": 65,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -616,8 +754,10 @@
                 "id": 66,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -625,8 +765,10 @@
                 "id": 67,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -634,8 +776,10 @@
                 "id": 68,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -643,8 +787,10 @@
                 "id": 69,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -652,8 +798,10 @@
                 "id": 70,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -661,8 +809,10 @@
                 "id": 71,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -670,8 +820,10 @@
                 "id": 72,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -679,8 +831,10 @@
                 "id": 73,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -688,8 +842,10 @@
                 "id": 74,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -698,45 +854,60 @@
                 "y": 96,
                 "id": 75,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 64,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 32,
                 "y": 96,
                 "id": 76,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 64,
                 "y": 96,
                 "id": 77,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 0,
+                    "y": 128,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 96,
                 "y": 96,
                 "id": 78,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 128,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 128,
                 "y": 96,
                 "id": 79,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 64,
+                    "y": 128,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 160,
@@ -744,8 +915,10 @@
                 "id": 80,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -753,8 +926,10 @@
                 "id": 81,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -762,8 +937,10 @@
                 "id": 82,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -771,8 +948,10 @@
                 "id": 83,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -780,8 +959,10 @@
                 "id": 84,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -789,8 +970,10 @@
                 "id": 85,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -798,8 +981,10 @@
                 "id": 86,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -807,8 +992,10 @@
                 "id": 87,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -816,8 +1003,10 @@
                 "id": 88,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -825,8 +1014,10 @@
                 "id": 89,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -834,8 +1025,10 @@
                 "id": 90,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -843,8 +1036,10 @@
                 "id": 91,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -852,8 +1047,10 @@
                 "id": 92,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -861,8 +1058,10 @@
                 "id": 93,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -870,8 +1069,10 @@
                 "id": 94,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -879,8 +1080,10 @@
                 "id": 95,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -888,8 +1091,10 @@
                 "id": 96,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -897,8 +1102,10 @@
                 "id": 97,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -906,8 +1113,10 @@
                 "id": 98,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -915,8 +1124,10 @@
                 "id": 99,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -925,9 +1136,12 @@
                 "y": 128,
                 "id": 100,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 32,
+                    "isImpassable": true
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 32,
@@ -935,35 +1149,46 @@
                 "id": 101,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
                 "y": 128,
                 "id": 102,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 0,
+                    "y": 160,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 96,
                 "y": 128,
                 "id": 103,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 32,
+                    "y": 160,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 128,
                 "y": 128,
                 "id": 104,
                 "v": {
-                    "x": -32,
-                    "y": -32
-                }
+                    "x": 64,
+                    "y": 160,
+                    "isImpassable": false
+                },
+                "defaultTile": false,
+                "selectedTile": true
             },
             {
                 "x": 160,
@@ -971,8 +1196,10 @@
                 "id": 105,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -980,8 +1207,10 @@
                 "id": 106,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -989,8 +1218,10 @@
                 "id": 107,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -998,8 +1229,10 @@
                 "id": 108,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -1007,8 +1240,10 @@
                 "id": 109,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -1016,8 +1251,10 @@
                 "id": 110,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -1025,8 +1262,10 @@
                 "id": 111,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -1034,8 +1273,10 @@
                 "id": 112,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -1043,8 +1284,10 @@
                 "id": 113,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -1052,8 +1295,10 @@
                 "id": 114,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -1061,8 +1306,10 @@
                 "id": 115,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -1070,8 +1317,10 @@
                 "id": 116,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -1079,8 +1328,10 @@
                 "id": 117,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -1088,8 +1339,10 @@
                 "id": 118,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -1097,8 +1350,10 @@
                 "id": 119,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -1106,8 +1361,10 @@
                 "id": 120,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -1115,8 +1372,10 @@
                 "id": 121,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -1124,8 +1383,10 @@
                 "id": 122,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -1133,8 +1394,10 @@
                 "id": 123,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -1142,8 +1405,10 @@
                 "id": 124,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -1153,8 +1418,10 @@
                 "id": 125,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -1162,8 +1429,10 @@
                 "id": 126,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -1171,8 +1440,10 @@
                 "id": 127,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -1180,8 +1451,10 @@
                 "id": 128,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -1189,8 +1462,10 @@
                 "id": 129,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -1198,8 +1473,10 @@
                 "id": 130,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -1207,8 +1484,10 @@
                 "id": 131,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -1216,8 +1495,10 @@
                 "id": 132,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -1225,8 +1506,10 @@
                 "id": 133,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -1234,8 +1517,10 @@
                 "id": 134,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -1243,8 +1528,10 @@
                 "id": 135,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -1252,8 +1539,10 @@
                 "id": 136,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -1261,8 +1550,10 @@
                 "id": 137,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -1270,8 +1561,10 @@
                 "id": 138,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -1279,8 +1572,10 @@
                 "id": 139,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -1288,8 +1583,10 @@
                 "id": 140,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -1297,8 +1594,10 @@
                 "id": 141,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -1306,8 +1605,10 @@
                 "id": 142,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -1315,8 +1616,10 @@
                 "id": 143,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -1324,8 +1627,10 @@
                 "id": 144,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -1333,8 +1638,10 @@
                 "id": 145,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -1342,8 +1649,10 @@
                 "id": 146,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -1351,8 +1660,10 @@
                 "id": 147,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -1360,8 +1671,10 @@
                 "id": 148,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -1369,8 +1682,10 @@
                 "id": 149,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -1380,8 +1695,10 @@
                 "id": 150,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -1389,8 +1706,10 @@
                 "id": 151,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -1398,8 +1717,10 @@
                 "id": 152,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -1407,8 +1728,10 @@
                 "id": 153,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -1416,8 +1739,10 @@
                 "id": 154,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -1425,8 +1750,10 @@
                 "id": 155,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -1434,8 +1761,10 @@
                 "id": 156,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -1443,8 +1772,10 @@
                 "id": 157,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -1452,8 +1783,10 @@
                 "id": 158,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -1461,8 +1794,10 @@
                 "id": 159,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -1470,8 +1805,10 @@
                 "id": 160,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -1479,8 +1816,10 @@
                 "id": 161,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -1488,8 +1827,10 @@
                 "id": 162,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -1497,8 +1838,10 @@
                 "id": 163,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -1506,8 +1849,10 @@
                 "id": 164,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -1515,8 +1860,10 @@
                 "id": 165,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -1524,8 +1871,10 @@
                 "id": 166,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -1533,8 +1882,10 @@
                 "id": 167,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -1542,8 +1893,10 @@
                 "id": 168,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -1551,8 +1904,10 @@
                 "id": 169,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -1560,8 +1915,10 @@
                 "id": 170,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -1569,8 +1926,10 @@
                 "id": 171,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -1578,8 +1937,10 @@
                 "id": 172,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -1587,8 +1948,10 @@
                 "id": 173,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -1596,8 +1959,10 @@
                 "id": 174,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -1607,8 +1972,10 @@
                 "id": 175,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -1616,8 +1983,10 @@
                 "id": 176,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -1625,8 +1994,10 @@
                 "id": 177,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -1634,8 +2005,10 @@
                 "id": 178,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -1643,8 +2016,10 @@
                 "id": 179,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -1652,8 +2027,10 @@
                 "id": 180,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -1661,8 +2038,10 @@
                 "id": 181,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -1670,8 +2049,10 @@
                 "id": 182,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -1679,8 +2060,10 @@
                 "id": 183,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -1688,8 +2071,10 @@
                 "id": 184,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -1697,8 +2082,10 @@
                 "id": 185,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -1706,8 +2093,10 @@
                 "id": 186,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -1715,8 +2104,10 @@
                 "id": 187,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -1724,8 +2115,10 @@
                 "id": 188,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -1733,8 +2126,10 @@
                 "id": 189,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -1742,8 +2137,10 @@
                 "id": 190,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -1751,8 +2148,10 @@
                 "id": 191,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -1760,8 +2159,10 @@
                 "id": 192,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -1769,8 +2170,10 @@
                 "id": 193,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -1778,8 +2181,10 @@
                 "id": 194,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -1787,8 +2192,10 @@
                 "id": 195,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -1796,8 +2203,10 @@
                 "id": 196,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -1805,8 +2214,10 @@
                 "id": 197,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -1814,8 +2225,10 @@
                 "id": 198,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -1823,8 +2236,10 @@
                 "id": 199,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -1834,8 +2249,10 @@
                 "id": 200,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -1843,8 +2260,10 @@
                 "id": 201,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -1852,8 +2271,10 @@
                 "id": 202,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -1861,8 +2282,10 @@
                 "id": 203,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -1870,8 +2293,10 @@
                 "id": 204,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -1879,8 +2304,10 @@
                 "id": 205,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -1888,8 +2315,10 @@
                 "id": 206,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -1897,8 +2326,10 @@
                 "id": 207,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -1906,8 +2337,10 @@
                 "id": 208,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -1915,8 +2348,10 @@
                 "id": 209,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -1924,8 +2359,10 @@
                 "id": 210,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -1933,8 +2370,10 @@
                 "id": 211,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -1942,8 +2381,10 @@
                 "id": 212,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -1951,8 +2392,10 @@
                 "id": 213,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -1960,8 +2403,10 @@
                 "id": 214,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -1969,8 +2414,10 @@
                 "id": 215,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -1978,8 +2425,10 @@
                 "id": 216,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -1987,8 +2436,10 @@
                 "id": 217,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -1996,8 +2447,10 @@
                 "id": 218,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -2005,8 +2458,10 @@
                 "id": 219,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -2014,8 +2469,10 @@
                 "id": 220,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -2023,8 +2480,10 @@
                 "id": 221,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -2032,8 +2491,10 @@
                 "id": 222,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -2041,8 +2502,10 @@
                 "id": 223,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -2050,8 +2513,10 @@
                 "id": 224,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -2061,8 +2526,10 @@
                 "id": 225,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -2070,8 +2537,10 @@
                 "id": 226,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -2079,8 +2548,10 @@
                 "id": 227,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -2088,8 +2559,10 @@
                 "id": 228,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -2097,8 +2570,10 @@
                 "id": 229,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -2106,8 +2581,10 @@
                 "id": 230,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -2115,8 +2592,10 @@
                 "id": 231,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -2124,8 +2603,10 @@
                 "id": 232,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -2133,8 +2614,10 @@
                 "id": 233,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -2142,8 +2625,10 @@
                 "id": 234,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -2151,8 +2636,10 @@
                 "id": 235,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -2160,8 +2647,10 @@
                 "id": 236,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -2169,8 +2658,10 @@
                 "id": 237,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -2178,8 +2669,10 @@
                 "id": 238,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -2187,8 +2680,10 @@
                 "id": 239,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -2196,8 +2691,10 @@
                 "id": 240,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -2205,8 +2702,10 @@
                 "id": 241,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -2214,8 +2713,10 @@
                 "id": 242,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -2223,8 +2724,10 @@
                 "id": 243,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -2232,8 +2735,10 @@
                 "id": 244,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -2241,8 +2746,10 @@
                 "id": 245,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -2250,8 +2757,10 @@
                 "id": 246,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -2259,8 +2768,10 @@
                 "id": 247,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -2268,8 +2779,10 @@
                 "id": 248,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -2277,8 +2790,10 @@
                 "id": 249,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -2288,8 +2803,10 @@
                 "id": 250,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -2297,8 +2814,10 @@
                 "id": 251,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -2306,8 +2825,10 @@
                 "id": 252,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -2315,8 +2836,10 @@
                 "id": 253,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -2324,8 +2847,10 @@
                 "id": 254,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -2333,8 +2858,10 @@
                 "id": 255,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -2342,8 +2869,10 @@
                 "id": 256,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -2351,8 +2880,10 @@
                 "id": 257,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -2360,8 +2891,10 @@
                 "id": 258,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -2369,8 +2902,10 @@
                 "id": 259,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -2378,8 +2913,10 @@
                 "id": 260,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -2387,8 +2924,10 @@
                 "id": 261,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -2396,8 +2935,10 @@
                 "id": 262,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -2405,8 +2946,10 @@
                 "id": 263,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -2414,8 +2957,10 @@
                 "id": 264,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -2423,8 +2968,10 @@
                 "id": 265,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -2432,8 +2979,10 @@
                 "id": 266,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -2441,8 +2990,10 @@
                 "id": 267,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -2450,8 +3001,10 @@
                 "id": 268,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -2459,8 +3012,10 @@
                 "id": 269,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -2468,8 +3023,10 @@
                 "id": 270,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -2477,8 +3034,10 @@
                 "id": 271,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -2486,8 +3045,10 @@
                 "id": 272,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -2495,8 +3056,10 @@
                 "id": 273,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -2504,8 +3067,10 @@
                 "id": 274,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -2515,8 +3080,10 @@
                 "id": 275,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -2524,8 +3091,10 @@
                 "id": 276,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -2533,8 +3102,10 @@
                 "id": 277,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -2542,8 +3113,10 @@
                 "id": 278,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -2551,8 +3124,10 @@
                 "id": 279,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -2560,8 +3135,10 @@
                 "id": 280,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -2569,8 +3146,10 @@
                 "id": 281,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -2578,8 +3157,10 @@
                 "id": 282,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -2587,8 +3168,10 @@
                 "id": 283,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -2596,8 +3179,10 @@
                 "id": 284,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -2605,8 +3190,10 @@
                 "id": 285,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -2614,8 +3201,10 @@
                 "id": 286,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -2623,8 +3212,10 @@
                 "id": 287,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -2632,8 +3223,10 @@
                 "id": 288,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -2641,8 +3234,10 @@
                 "id": 289,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -2650,8 +3245,10 @@
                 "id": 290,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -2659,8 +3256,10 @@
                 "id": 291,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -2668,8 +3267,10 @@
                 "id": 292,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -2677,8 +3278,10 @@
                 "id": 293,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -2686,8 +3289,10 @@
                 "id": 294,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -2695,8 +3300,10 @@
                 "id": 295,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -2704,8 +3311,10 @@
                 "id": 296,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -2713,8 +3322,10 @@
                 "id": 297,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -2722,8 +3333,10 @@
                 "id": 298,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -2731,8 +3344,10 @@
                 "id": 299,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -2742,8 +3357,10 @@
                 "id": 300,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -2751,8 +3368,10 @@
                 "id": 301,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -2760,8 +3379,10 @@
                 "id": 302,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -2769,8 +3390,10 @@
                 "id": 303,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -2778,8 +3401,10 @@
                 "id": 304,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -2787,8 +3412,10 @@
                 "id": 305,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -2796,8 +3423,10 @@
                 "id": 306,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -2805,8 +3434,10 @@
                 "id": 307,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -2814,8 +3445,10 @@
                 "id": 308,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -2823,8 +3456,10 @@
                 "id": 309,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -2832,8 +3467,10 @@
                 "id": 310,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -2841,8 +3478,10 @@
                 "id": 311,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -2850,8 +3489,10 @@
                 "id": 312,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -2859,8 +3500,10 @@
                 "id": 313,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -2868,8 +3511,10 @@
                 "id": 314,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -2877,8 +3522,10 @@
                 "id": 315,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -2886,8 +3533,10 @@
                 "id": 316,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -2895,8 +3544,10 @@
                 "id": 317,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -2904,8 +3555,10 @@
                 "id": 318,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -2913,8 +3566,10 @@
                 "id": 319,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -2922,8 +3577,10 @@
                 "id": 320,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -2931,8 +3588,10 @@
                 "id": 321,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -2940,8 +3599,10 @@
                 "id": 322,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -2949,8 +3610,10 @@
                 "id": 323,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -2958,8 +3621,10 @@
                 "id": 324,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -2969,8 +3634,10 @@
                 "id": 325,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -2978,8 +3645,10 @@
                 "id": 326,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -2987,8 +3656,10 @@
                 "id": 327,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -2996,8 +3667,10 @@
                 "id": 328,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -3005,8 +3678,10 @@
                 "id": 329,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -3014,8 +3689,10 @@
                 "id": 330,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -3023,18 +3700,21 @@
                 "id": 331,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
                 "y": 416,
                 "id": 332,
                 "v": {
-                    "x": 32,
-                    "y": 128
+                    "x": -32,
+                    "y": -32,
+                    "isImpassable": false
                 },
-                "tileSprite": "springSprite"
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -3042,8 +3722,10 @@
                 "id": 333,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -3051,8 +3733,10 @@
                 "id": 334,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -3060,8 +3744,10 @@
                 "id": 335,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -3069,8 +3755,10 @@
                 "id": 336,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -3078,8 +3766,10 @@
                 "id": 337,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -3087,8 +3777,10 @@
                 "id": 338,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -3096,8 +3788,10 @@
                 "id": 339,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -3105,8 +3799,10 @@
                 "id": 340,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -3114,8 +3810,10 @@
                 "id": 341,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -3123,8 +3821,10 @@
                 "id": 342,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -3132,8 +3832,10 @@
                 "id": 343,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -3141,8 +3843,10 @@
                 "id": 344,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -3150,8 +3854,10 @@
                 "id": 345,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -3159,8 +3865,10 @@
                 "id": 346,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -3168,8 +3876,10 @@
                 "id": 347,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -3177,8 +3887,10 @@
                 "id": 348,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -3186,8 +3898,10 @@
                 "id": 349,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -3197,8 +3911,10 @@
                 "id": 350,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -3206,8 +3922,10 @@
                 "id": 351,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -3215,8 +3933,10 @@
                 "id": 352,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -3224,8 +3944,10 @@
                 "id": 353,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -3233,8 +3955,10 @@
                 "id": 354,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -3242,8 +3966,10 @@
                 "id": 355,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -3251,8 +3977,10 @@
                 "id": 356,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -3260,8 +3988,10 @@
                 "id": 357,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -3269,8 +3999,10 @@
                 "id": 358,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -3278,8 +4010,10 @@
                 "id": 359,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -3287,8 +4021,10 @@
                 "id": 360,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -3296,8 +4032,10 @@
                 "id": 361,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -3305,8 +4043,10 @@
                 "id": 362,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -3314,8 +4054,10 @@
                 "id": 363,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -3323,8 +4065,10 @@
                 "id": 364,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -3332,8 +4076,10 @@
                 "id": 365,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -3341,8 +4087,10 @@
                 "id": 366,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -3350,8 +4098,10 @@
                 "id": 367,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -3359,8 +4109,10 @@
                 "id": 368,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -3368,8 +4120,10 @@
                 "id": 369,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -3377,8 +4131,10 @@
                 "id": 370,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -3386,8 +4142,10 @@
                 "id": 371,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -3395,8 +4153,10 @@
                 "id": 372,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -3404,8 +4164,10 @@
                 "id": 373,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -3413,8 +4175,10 @@
                 "id": 374,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -3424,8 +4188,10 @@
                 "id": 375,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -3433,8 +4199,10 @@
                 "id": 376,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -3442,8 +4210,10 @@
                 "id": 377,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -3451,8 +4221,10 @@
                 "id": 378,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -3460,8 +4232,10 @@
                 "id": 379,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -3469,8 +4243,10 @@
                 "id": 380,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -3478,8 +4254,10 @@
                 "id": 381,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -3487,8 +4265,10 @@
                 "id": 382,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -3496,8 +4276,10 @@
                 "id": 383,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -3505,8 +4287,10 @@
                 "id": 384,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -3514,8 +4298,10 @@
                 "id": 385,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -3523,8 +4309,10 @@
                 "id": 386,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -3532,8 +4320,10 @@
                 "id": 387,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -3541,8 +4331,10 @@
                 "id": 388,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -3550,8 +4342,10 @@
                 "id": 389,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -3559,8 +4353,10 @@
                 "id": 390,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -3568,8 +4364,10 @@
                 "id": 391,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -3577,8 +4375,10 @@
                 "id": 392,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -3586,8 +4386,10 @@
                 "id": 393,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -3595,8 +4397,10 @@
                 "id": 394,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -3604,8 +4408,10 @@
                 "id": 395,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -3613,8 +4419,10 @@
                 "id": 396,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -3622,8 +4430,10 @@
                 "id": 397,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -3631,8 +4441,10 @@
                 "id": 398,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -3640,8 +4452,10 @@
                 "id": 399,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -3651,8 +4465,10 @@
                 "id": 400,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -3660,8 +4476,10 @@
                 "id": 401,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -3669,8 +4487,10 @@
                 "id": 402,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -3678,8 +4498,10 @@
                 "id": 403,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -3687,8 +4509,10 @@
                 "id": 404,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -3696,8 +4520,10 @@
                 "id": 405,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -3705,8 +4531,10 @@
                 "id": 406,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -3714,8 +4542,10 @@
                 "id": 407,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -3723,8 +4553,10 @@
                 "id": 408,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -3732,8 +4564,10 @@
                 "id": 409,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -3741,8 +4575,10 @@
                 "id": 410,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -3750,8 +4586,10 @@
                 "id": 411,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -3759,8 +4597,10 @@
                 "id": 412,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -3768,8 +4608,10 @@
                 "id": 413,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -3777,8 +4619,10 @@
                 "id": 414,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -3786,8 +4630,10 @@
                 "id": 415,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -3795,8 +4641,10 @@
                 "id": 416,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -3804,8 +4652,10 @@
                 "id": 417,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -3813,8 +4663,10 @@
                 "id": 418,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -3822,8 +4674,10 @@
                 "id": 419,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -3831,8 +4685,10 @@
                 "id": 420,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -3840,8 +4696,10 @@
                 "id": 421,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -3849,8 +4707,10 @@
                 "id": 422,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -3858,8 +4718,10 @@
                 "id": 423,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -3867,8 +4729,10 @@
                 "id": 424,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -3878,8 +4742,10 @@
                 "id": 425,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -3887,8 +4753,10 @@
                 "id": 426,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -3896,8 +4764,10 @@
                 "id": 427,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -3905,8 +4775,10 @@
                 "id": 428,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -3914,8 +4786,10 @@
                 "id": 429,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -3923,8 +4797,10 @@
                 "id": 430,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -3932,8 +4808,10 @@
                 "id": 431,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -3941,8 +4819,10 @@
                 "id": 432,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -3950,8 +4830,10 @@
                 "id": 433,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -3959,8 +4841,10 @@
                 "id": 434,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -3968,8 +4852,10 @@
                 "id": 435,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -3977,8 +4863,10 @@
                 "id": 436,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -3986,8 +4874,10 @@
                 "id": 437,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -3995,8 +4885,10 @@
                 "id": 438,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -4004,8 +4896,10 @@
                 "id": 439,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -4013,8 +4907,10 @@
                 "id": 440,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -4022,8 +4918,10 @@
                 "id": 441,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -4031,8 +4929,10 @@
                 "id": 442,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -4040,8 +4940,10 @@
                 "id": 443,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -4049,8 +4951,10 @@
                 "id": 444,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -4058,8 +4962,10 @@
                 "id": 445,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -4067,8 +4973,10 @@
                 "id": 446,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -4076,8 +4984,10 @@
                 "id": 447,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -4085,8 +4995,10 @@
                 "id": 448,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -4094,8 +5006,10 @@
                 "id": 449,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ],
         [
@@ -4105,8 +5019,10 @@
                 "id": 450,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 32,
@@ -4114,8 +5030,10 @@
                 "id": 451,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 64,
@@ -4123,8 +5041,10 @@
                 "id": 452,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 96,
@@ -4132,8 +5052,10 @@
                 "id": 453,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 128,
@@ -4141,8 +5063,10 @@
                 "id": 454,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 160,
@@ -4150,8 +5074,10 @@
                 "id": 455,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 192,
@@ -4159,8 +5085,10 @@
                 "id": 456,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 224,
@@ -4168,8 +5096,10 @@
                 "id": 457,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 256,
@@ -4177,8 +5107,10 @@
                 "id": 458,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 288,
@@ -4186,8 +5118,10 @@
                 "id": 459,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 320,
@@ -4195,8 +5129,10 @@
                 "id": 460,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 352,
@@ -4204,8 +5140,10 @@
                 "id": 461,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 384,
@@ -4213,8 +5151,10 @@
                 "id": 462,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 416,
@@ -4222,8 +5162,10 @@
                 "id": 463,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 448,
@@ -4231,8 +5173,10 @@
                 "id": 464,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 480,
@@ -4240,8 +5184,10 @@
                 "id": 465,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 512,
@@ -4249,8 +5195,10 @@
                 "id": 466,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 544,
@@ -4258,8 +5206,10 @@
                 "id": 467,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 576,
@@ -4267,8 +5217,10 @@
                 "id": 468,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 608,
@@ -4276,8 +5228,10 @@
                 "id": 469,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 640,
@@ -4285,8 +5239,10 @@
                 "id": 470,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 672,
@@ -4294,8 +5250,10 @@
                 "id": 471,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 704,
@@ -4303,8 +5261,10 @@
                 "id": 472,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 736,
@@ -4312,8 +5272,10 @@
                 "id": 473,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             },
             {
                 "x": 768,
@@ -4321,13 +5283,17 @@
                 "id": 474,
                 "v": {
                     "x": -32,
-                    "y": -32
-                }
+                    "y": -32,
+                    "isImpassable": false
+                },
+                "defaultTile": true
             }
         ]
     ],
     "bgTile": {
         "x": 32,
-        "y": 224
+        "y": 128,
+        "isImpassable": false,
+        "bgTile": true
     }
 }

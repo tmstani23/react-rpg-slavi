@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Actor from '../actor';
 import useKeyPress from '../../hooks/use-key-press';
 import useWalk from '../../hooks/use-walk';
 
+ 
 
-const Player = ( {skin} ) => {
+
+const Player = ( {skin, tiles} ) => {
+    const [impassableTilesState, setImpassableTilesState] = useState([]); 
     // pixel h and width for the sprite
     const data = {
         h: 32,
@@ -13,6 +16,34 @@ const Player = ( {skin} ) => {
     const maxSteps = 3;
     // direction, sprite picture, walk method and sprite x,y position are destructured from the useWalk hook
     const {dir, step, walk, position} = useWalk(maxSteps);
+
+    
+
+    const parseOutImpassableTiles = (mapTiles) => {
+        // -loop through all non-bg tiles before player move
+        const impassableTiles = mapTiles.map((row) => {
+           
+            return row.filter((tile) => {
+                //console.log(tile['v'].isImpassable);
+                // -check if tile is passable
+                if(tile['v'].isImpassable) {
+                    // -if not passable
+                    //save tile to array
+                    return tile;
+                    
+                }
+                
+       
+            })
+            
+        }).filter(notEmptyArr => {
+            if(notEmptyArr.length !== 0) {
+                return notEmptyArr;
+            }
+        })
+        //console.log(impassableTiles)
+        setImpassableTilesState(impassableTiles);
+    }
 
     // Call the useKeyPress function to add event listener for keypress
     useKeyPress((event) => {
@@ -25,10 +56,16 @@ const Player = ( {skin} ) => {
             ? event.key.replace("Arrow", "").toLowerCase()
             // else if any other key set direction to down
             : "down"
-        
-        walk(direction);
+        walk(direction, impassableTilesState);
         
     })
+
+    useEffect(() => {
+        return parseOutImpassableTiles(tiles)
+        
+        
+          
+    }, [tiles])
 
     return (
         <Actor 

@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 const useWalk = (maxSteps) => {
-    // [getter/setter] = useState(default)
+    // player position, direction and step in animation sequence
     const [position, setPos] = useState({x: 0, y: 0});
     const [dir, setDir] = useState(0);
     const [step, setStep] = useState(0);
@@ -23,15 +23,61 @@ const useWalk = (maxSteps) => {
         up: {x: 0, y: -stepSize},
     }
 
+    const checkIfReachedBoundary = (playerPos, dir) => {
+        const {x, y} = playerPos;
+        let failedBoundaryCheck = '';
+        const mapBoundaries = {
+            top: `${x + walkDistanceModifier[dir].x >= -10 && y + walkDistanceModifier[dir].y <= -10}`,
+            right: `${x + walkDistanceModifier[dir].x >= 780 && y + walkDistanceModifier[dir].y  >= -10}`,
+            bottom: `${x + walkDistanceModifier[dir].x <= 780 && y + walkDistanceModifier[dir].y  >= 580}`,
+            left: `${x + walkDistanceModifier[dir].x <= -10 && y + walkDistanceModifier[dir].y  <= 580}`,
+        }
+        
+        //check if any of the boundaries have been reached and if so return true
+        for(const key in mapBoundaries) {
+            //console.log(mapBoundaries[key], key, "key in mapBoundaries")
+            if(mapBoundaries[key] === 'true') {
+                failedBoundaryCheck = true;
+            } 
+            
+        }
+        //console.log(mapBoundaries.top, position);
+        //console.log(failedBoundaryCheck)
+        return failedBoundaryCheck;
+    }
+
+    const checkIfImpassableTile = (playerPos, dir, impassableTiles) => {
+        const {x, y} = playerPos;
+        
+        console.log(dir, impassableTiles);
+        let failedBoundaryCheck = ''
+        
+                
+        // -if not passable
+        //     run tile boundary check function
+        //         -check current position against all sides of the tile
+        //             -iff check passes allow movement
+       
+    } 
+
     //sets the sprite x/y position on screen and selects which step in the sprite spritesheet to render
-    const walk = (dir) => {
+    const walk = (dir, mapTiles) => {
         
 
         //set direction integers from hashmap into Dir state
         setDir(prev => {
-            //if current direction matches the previous direction then move else just turn
+            //if current direction matches the previous direction then move else remain facing same dir
             if(directionsHash[dir] === prev) {
-                 move(dir)
+                //check if havent reached map boundary or impassable tile
+                //console.log(checkIfReachedBoundary(position, dir));
+                checkIfImpassableTile(position, dir, mapTiles);
+
+                if(checkIfReachedBoundary(position, dir) !== true){
+                    move(dir)
+                } else {
+                    return;
+                } 
+                    
             }
             return directionsHash[dir]
         });
