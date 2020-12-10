@@ -75,7 +75,7 @@ return (
             bgTile={bgTile}
             setBgTile={setBgTile}
           >
-            <Player skin={maleSkin1} />
+            <Player skin={maleSkin1} tiles={tiles} />
           </Map>
         </div>
          

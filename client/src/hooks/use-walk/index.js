@@ -46,16 +46,32 @@ const useWalk = (maxSteps) => {
         return failedBoundaryCheck;
     }
 
+    const checkIfImpassableTile = (playerPos, dir, impassableTiles) => {
+        const {x, y} = playerPos;
+        
+        console.log(dir, impassableTiles);
+        let failedBoundaryCheck = ''
+        
+                
+        // -if not passable
+        //     run tile boundary check function
+        //         -check current position against all sides of the tile
+        //             -iff check passes allow movement
+       
+    } 
+
     //sets the sprite x/y position on screen and selects which step in the sprite spritesheet to render
-    const walk = (dir) => {
+    const walk = (dir, mapTiles) => {
         
 
         //set direction integers from hashmap into Dir state
         setDir(prev => {
             //if current direction matches the previous direction then move else remain facing same dir
             if(directionsHash[dir] === prev) {
-                //check if havent reached boundary 
+                //check if havent reached map boundary or impassable tile
                 //console.log(checkIfReachedBoundary(position, dir));
+                checkIfImpassableTile(position, dir, mapTiles);
+
                 if(checkIfReachedBoundary(position, dir) !== true){
                     move(dir)
                 } else {

@@ -6,7 +6,7 @@ body {
   font-size: 16px;
   background-color: #000000;
   color: white;
-  opacity: 0.8;
+  
 }
 /* standard html elements */
 button {
@@ -83,6 +83,7 @@ button:hover {
   
   box-sizing: border-box;
   border: 1px solid grey;
+  
   margin: 0.5rem auto;
   width: 800px;
   height: 800px;
@@ -98,6 +99,7 @@ button:hover {
 .map-container-div {
   border: 1px solid grey;
   display: flex;
+  background-color: white;
   
 }
 .row {

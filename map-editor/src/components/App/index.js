@@ -36,6 +36,7 @@ const App = () => {
                     y,
                     id: id++,
                     v: { x: -32, y: -32, isImpassable: false },
+                    defaultTile: true
                 })
             }
             _tiles.push(row);

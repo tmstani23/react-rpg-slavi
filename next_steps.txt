@@ -44,8 +44,8 @@ X-Stop player from moving outside map boundaries
     -add passable flag to each tile obj that is a bg tile
     X - create impassable tile flag that can be switched on with toggle
     x - use active tile function to add impassable state to active tile obj
-    - Set isPassable state to all tiles on creation to true
-        - verify if working
+    X Set isPassable state to all tiles on creation to true
+        X verify if working
         
     -loop through all non-bg tiles before player move
         -check if tile is passable

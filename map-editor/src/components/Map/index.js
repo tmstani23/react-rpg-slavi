@@ -26,7 +26,8 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
                 // copy entire tile at xy location and update value to active tile state
                 ...clone[y][x],
                 v: activeTile,
-                tileSprite: sprite
+                defaultTile: false,
+                selectedTile: true
             }
             //swap in active tile to the cloned matrix and return it
             clone[y][x] = tile;
