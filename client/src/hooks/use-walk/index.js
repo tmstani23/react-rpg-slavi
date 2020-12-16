@@ -48,17 +48,49 @@ const useWalk = (maxSteps) => {
 
     const checkIfImpassableTile = (playerPos, dir, impassableTiles) => {
         const {x, y} = playerPos;
+        console.log(x,y, 'playerpos')
+        //console.log(dir, impassableTiles);
         
-        console.log(dir, impassableTiles);
-        let failedBoundaryCheck = ''
         
+        //loop through impassable tiles
+        impassableTiles.map((tileRowArrays) => {
+            console.log(tileRowArrays);
+            //Loop through each array
+            tileRowArrays.map((tileObj) => {
+                const tilePos = {tileX: tileObj['x'], tileY: tileObj['y']}
                 
-        // -if not passable
-        //     run tile boundary check function
-        //         -check current position against all sides of the tile
-        //             -iff check passes allow movement
+                //console.log(tilePos.tileX, tilePos.tileY);
+                 //     run tile boundary check function
+                 isTileBoundaryReached(playerPos, dir, tilePos)
+                
+            })
+        })         
        
     } 
+
+    const isTileBoundaryReached = (playerPos, playerFacingDir, tilePos) => {
+        const {x, y} = playerPos;
+        const {tileX, tileY} = tilePos
+        let failedBoundaryCheck = '';
+        const tileBoundaries = {
+            top: `${x + walkDistanceModifier[playerFacingDir].x >= tileX && y + walkDistanceModifier[playerFacingDir].y >= tileY}`,
+            right: `${x + walkDistanceModifier[playerFacingDir].x >= tileX && y + walkDistanceModifier[playerFacingDir].y  >= -10}`,
+            bottom: `${x + walkDistanceModifier[playerFacingDir].x <= 780 && y + walkDistanceModifier[playerFacingDir].y  >= 580}`,
+            left: `${x + walkDistanceModifier[playerFacingDir].x <= -10 && y + walkDistanceModifier[playerFacingDir].y  <= 580}`,
+        }
+        
+        //check if any of the boundaries have been reached and if so return true
+        for(const key in tileBoundaries) {
+            //console.log(mapBoundaries[key], key, "key in mapBoundaries")
+            if(tileBoundaries[key] === 'true') {
+                failedBoundaryCheck = true;
+            } 
+            
+        }
+        //console.log(tileBoundaries.top, playerPos);
+        // console.log(failedBoundaryCheck)
+        return failedBoundaryCheck;
+    }
 
     //sets the sprite x/y position on screen and selects which step in the sprite spritesheet to render
     const walk = (dir, mapTiles) => {

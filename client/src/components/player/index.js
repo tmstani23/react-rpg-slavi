@@ -7,6 +7,7 @@ import useWalk from '../../hooks/use-walk';
 
 
 const Player = ( {skin, tiles} ) => {
+    //state for impassable tiles
     const [impassableTilesState, setImpassableTilesState] = useState([]); 
     // pixel h and width for the sprite
     const data = {
@@ -20,9 +21,9 @@ const Player = ( {skin, tiles} ) => {
     
 
     const parseOutImpassableTiles = (mapTiles) => {
-        // -loop through all non-bg tiles before player move
+        // -loop through all rows in map tiles matrix
         const impassableTiles = mapTiles.map((row) => {
-           
+           //in each row return an array containing only tiles with impassable flag
             return row.filter((tile) => {
                 //console.log(tile['v'].isImpassable);
                 // -check if tile is passable
@@ -37,6 +38,7 @@ const Player = ( {skin, tiles} ) => {
             })
             
         }).filter(notEmptyArr => {
+            //Filter out all the empty arrays that contained no impassable tiles
             if(notEmptyArr.length !== 0) {
                 return notEmptyArr;
             }
