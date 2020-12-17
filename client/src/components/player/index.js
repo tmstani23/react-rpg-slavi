@@ -4,8 +4,6 @@ import useKeyPress from '../../hooks/use-key-press';
 import useWalk from '../../hooks/use-walk';
 
  
-
-
 const Player = ( {skin, tiles} ) => {
     //state for impassable tiles
     const [impassableTilesState, setImpassableTilesState] = useState([]); 
@@ -33,8 +31,6 @@ const Player = ( {skin, tiles} ) => {
                     return tile;
                     
                 }
-                
-       
             })
             
         }).filter(notEmptyArr => {
