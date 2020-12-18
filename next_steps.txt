@@ -51,6 +51,7 @@ X-Stop player from moving outside map boundaries
         -done in player component
         
     X - loop through all non-bg tiles before player move
+        -Create map with single impassable tile for testing
             run tile boundary check function
                 -check current position against all sides of the tile
                     -translate sides from drawing into function

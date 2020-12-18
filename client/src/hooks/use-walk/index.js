@@ -71,9 +71,10 @@ const useWalk = (maxSteps) => {
             })
         })
 
-        //console.log(tilesFailedBoundaryCheck, 'tilesFailedBoundaryCheck')
+        console.log(tilesFailedBoundaryCheck, 'tilesFailedBoundaryCheck')
         if(tilesFailedBoundaryCheck.includes(true)) {
-            console.log("failedBoundaryCheck")
+            //console.log("failedBoundaryCheck")
+            failedBoundaryCheck = true;
         }
         
         return failedBoundaryCheck
@@ -81,17 +82,23 @@ const useWalk = (maxSteps) => {
     } 
 
     const isTileBoundaryReached = (playerPos, playerFacingDir, tilePos) => {
-        const {x, y} = playerPos;
+        let {x, y} = playerPos;
+        let centerOfSpriteX = x + 16;
+        let centerOfSpriteY = y + 16;
         const {tileX, tileY} = tilePos
         const tileSize = 32;
         const boundaryCheckEdgesPassed = []
         let failedBoundaryCheck = false;
         
+        // mostly working with standard x,y player pos
+        // const tileBoundaries = {
+        //     top: `${x + walkDistanceModifier[playerFacingDir].x * 2 >= tileX - 12 && y + walkDistanceModifier[playerFacingDir].y * 2 >= + tileY}`,
+        //     right: `${x + walkDistanceModifier[playerFacingDir].x < tileX + tileSize && y + walkDistanceModifier[playerFacingDir].y  * 2 < tileY + tileSize}`,
+        // }
+
         const tileBoundaries = {
-            top: `${x + walkDistanceModifier[playerFacingDir].x >= tileX && y + walkDistanceModifier[playerFacingDir].y >= tileY}`,
-            right: `${x + walkDistanceModifier[playerFacingDir].x <= tileX + tileSize && y + walkDistanceModifier[playerFacingDir].y  >= tileY}`,
-            bottom: `${x + walkDistanceModifier[playerFacingDir].x <= tileX + tileSize && y + walkDistanceModifier[playerFacingDir].y  <= tileY + tileSize}`,
-            left: `${x + walkDistanceModifier[playerFacingDir].x >= tileX && y + walkDistanceModifier[playerFacingDir].y  <= tileY + tileSize}`,
+            top: `${centerOfSpriteX + walkDistanceModifier[playerFacingDir].x * 2 >= tileX - 12 && centerOfSpriteY + walkDistanceModifier[playerFacingDir].y >= + tileY}`,
+            right: `${centerOfSpriteX + walkDistanceModifier[playerFacingDir].x <= tileX + tileSize && centerOfSpriteY + walkDistanceModifier[playerFacingDir].y  * 2 < tileY + tileSize}`,
         }
         
         //check if any of the boundaries have been reached and if so return true
@@ -109,12 +116,9 @@ const useWalk = (maxSteps) => {
             
         }
 
-        console.log(boundaryCheckEdgesPassed.length)
-        //console.log(tileBoundaries.top, playerPos);
-        console.log(boundaryCheckEdgesPassed)
-        return boundaryCheckEdgesPassed.length == 4 ? true : false
         
-        //console.log(failedBoundaryCheck)
+        //console.log(boundaryCheckEdgesPassed, playerPos, playerFacingDir)
+        return boundaryCheckEdgesPassed.length == 2 ? true : false
          
     }
 
