@@ -46,12 +46,15 @@ X-Stop player from moving outside map boundaries
     x - use active tile function to add impassable state to active tile obj
     X Set isPassable state to all tiles on creation to true
         X verify if working
+
+    X parse impassable tiles into separate state
+        -done in player component
         
-    -loop through all non-bg tiles before player move
-        -check if tile is passable
-        -if not passable
+    X - loop through all non-bg tiles before player move
+        -Create map with single impassable tile for testing
             run tile boundary check function
                 -check current position against all sides of the tile
+                    -translate sides from drawing into function
                     -iff check passes allow movement
 
 add collision logic to player interacting with map
