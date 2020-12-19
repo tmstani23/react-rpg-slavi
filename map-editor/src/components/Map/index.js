@@ -51,13 +51,15 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
                     > 
                         {
                             row.map((tile, x) => {
+                                const tileImpassableBorder = tile['v'].isImpassable ? "3px solid red" : "1px solid black";
+                                
                                 return (
                                     <div
                                         key={x+420}
                                         onClick={() => dropTile({x, y})}
                                         style={{
-                                            borderTop: "1px solid black",
-                                            borderRight: "1px solid black",
+                                            borderTop: tileImpassableBorder,
+                                            borderRight: tileImpassableBorder,
                                             background: `url(${tileset[sprite]}) -${tileType === bgTile ? bgTile.x : tile.v.x}px -${tileType === bgTile ? bgTile.y : tile.v.y}px no-repeat`,
                                             width: 32,
                                             height: 32,

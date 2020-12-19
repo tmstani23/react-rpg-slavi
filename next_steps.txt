@@ -40,24 +40,26 @@ X-Stop player from moving outside map boundaries
             - check if player pos is < x/y positions for each side of the map
     X - prevent player from moving if boundry check fails
 
-- add collision boundaries to object tiles
-    -add passable flag to each tile obj that is a bg tile
-    X - create impassable tile flag that can be switched on with toggle
-    x - use active tile function to add impassable state to active tile obj
-    X Set isPassable state to all tiles on creation to true
-        X verify if working
+-add collision logic to player interacting with map
+    - add collision boundaries to object tiles
+        -add passable flag to each tile obj that is a bg tile
+        X - create impassable tile flag that can be switched on with toggle
+        x - use active tile function to add impassable state to active tile obj
+        X Set isPassable state to all tiles on creation to true
+            X verify if working
 
-    X parse impassable tiles into separate state
-        -done in player component
-        
-    X - loop through all non-bg tiles before player move
-        -Create map with single impassable tile for testing
-            run tile boundary check function
-                -check current position against all sides of the tile
-                    -translate sides from drawing into function
-                    -iff check passes allow movement
+        X parse impassable tiles into separate state
+            -done in player component
+            
+        X - loop through all non-bg tiles before player move
+        X -Create map with single impassable tile for testing
+            X run tile boundary check function
+                X -check current position against all sides of the tile
+                        X-translate sides from drawing into function
+                    X -iff check passes allow movement
+        -test functionality with many impassable tiles
 
-add collision logic to player interacting with map
+
 add basic items to map
 add enemies to map
 add basic health and damage system

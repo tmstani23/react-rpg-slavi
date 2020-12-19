@@ -46,7 +46,7 @@ const useWalk = (maxSteps) => {
         return failedBoundaryCheck;
     }
 
-    const checkIfImpassableTile = (playerPos, dir, impassableTiles) => {
+    const checkTilesForBoundaryViolation = (playerPos, dir, impassableTiles) => {
         const {x, y} = playerPos;
         let tilesFailedBoundaryCheck = [];
         //console.log(x,y, 'playerpos')
@@ -62,16 +62,15 @@ const useWalk = (maxSteps) => {
                 const tilePos = {tileX: tileObj['x'], tileY: tileObj['y']}
                 
                 //console.log(tilePos.tileX, tilePos.tileY);
-                 //     run tile boundary check function
-               
-                
+                 // Add boundary test/fail result to an array used at the end to verify if any tiles have been violated
                 tilesFailedBoundaryCheck.push(isTileBoundaryReached(playerPos, dir, tilePos))
                 
                 
             })
         })
 
-        console.log(tilesFailedBoundaryCheck, 'tilesFailedBoundaryCheck')
+        //console.log(tilesFailedBoundaryCheck, 'tilesFailedBoundaryCheck')
+        //If array contains a true state one of the tiles had a failed test
         if(tilesFailedBoundaryCheck.includes(true)) {
             //console.log("failedBoundaryCheck")
             failedBoundaryCheck = true;
@@ -88,24 +87,21 @@ const useWalk = (maxSteps) => {
         const {tileX, tileY} = tilePos
         const tileSize = 32;
         const boundaryCheckEdgesPassed = []
-        let failedBoundaryCheck = false;
         
-        // mostly working with standard x,y player pos
-        // const tileBoundaries = {
-        //     top: `${x + walkDistanceModifier[playerFacingDir].x * 2 >= tileX - 12 && y + walkDistanceModifier[playerFacingDir].y * 2 >= + tileY}`,
-        //     right: `${x + walkDistanceModifier[playerFacingDir].x < tileX + tileSize && y + walkDistanceModifier[playerFacingDir].y  * 2 < tileY + tileSize}`,
-        // }
-
+        // Defines interior portion of a sprite tile up to a boundary edge
         const tileBoundaries = {
-            top: `${centerOfSpriteX + walkDistanceModifier[playerFacingDir].x * 2 >= tileX - 12 && centerOfSpriteY + walkDistanceModifier[playerFacingDir].y >= + tileY}`,
-            right: `${centerOfSpriteX + walkDistanceModifier[playerFacingDir].x <= tileX + tileSize && centerOfSpriteY + walkDistanceModifier[playerFacingDir].y  * 2 < tileY + tileSize}`,
+            // defines start of boundary on the horizontal and vertical of the sprite
+            top: `${centerOfSpriteX + walkDistanceModifier[playerFacingDir].x >= tileX && centerOfSpriteY + walkDistanceModifier[playerFacingDir].y >= tileY}`,
+            // defines the end of boundary on the horizontal and vertical of the sprite
+            right: `${centerOfSpriteX + walkDistanceModifier[playerFacingDir].x <= tileX + tileSize && centerOfSpriteY + walkDistanceModifier[playerFacingDir].y < tileY + tileSize}`,
+            
         }
         
         //check if any of the boundaries have been reached and if so return true
         for(const key in tileBoundaries) {
             //console.log(mapBoundaries[key], key, "key in mapBoundaries")
             if(tileBoundaries[key] === 'true') {
-                //console.log(tileX, tileY, key)
+            
                 let trueLocationObj = {
                     tileX,
                     tileY,
@@ -116,7 +112,7 @@ const useWalk = (maxSteps) => {
             
         }
 
-        
+        //If the boundary check array contains 2 objects then the desired movement is within the boundary
         //console.log(boundaryCheckEdgesPassed, playerPos, playerFacingDir)
         return boundaryCheckEdgesPassed.length == 2 ? true : false
          
@@ -134,13 +130,10 @@ const useWalk = (maxSteps) => {
                 //console.log(checkIfReachedBoundary(position, dir));
                 ;
 
-                if(checkIfReachedBoundary(position, dir) !== true && checkIfImpassableTile(position, dir, mapTiles) !== true) {
+                if(checkIfReachedBoundary(position, dir) !== true && checkTilesForBoundaryViolation(position, dir, mapTiles) !== true) {
                     
                     move(dir)
                 } 
-                // else {
-                //     return;
-                // } 
                     
             }
             return directionsHash[dir]
@@ -153,9 +146,6 @@ const useWalk = (maxSteps) => {
     const move = (dir) => {
         // sets the x and y position of the sprite on the screen
         return setPos((prev) => {
-            // console.log(prev.x, prev.y, "prev")
-            // console.log(position.x, position.y, 'position')
-            //console.log(prev.x, prev.y, "prev", position.x, position.y, 'position')
             
             //console.log(dir, 'dir in move')
             // new position is the previous position plus a pixel distance modifier.  

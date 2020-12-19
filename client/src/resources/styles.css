@@ -53,12 +53,19 @@ button:hover {
   width: 0.25rem !important;
 }
 
+.Dropdown-root.is-open {
+  
+}
+
+
 .Dropdown-root.is-open > .Dropdown-menu {
+  
   width: 16rem;
-  height: 6rem;
+  height: 500px;
   padding-right: 3rem;
   background-color: rgb(75, 189, 255);
-  overflow-wrap: break-word;
+  
+  
   
 }
 
