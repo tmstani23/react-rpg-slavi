@@ -2,7 +2,7 @@
     "rpg-nature-tileset": {
       "variants": ["springSprite", "fallSprite", "winterSprite"],
       "size": {
-        "height": 288,
+        "height": 320,
         "width": 640
       }
     }

@@ -40,9 +40,9 @@ X-Stop player from moving outside map boundaries
             - check if player pos is < x/y positions for each side of the map
     X - prevent player from moving if boundry check fails
 
--add collision logic to player interacting with map
-    - add collision boundaries to object tiles
-        -add passable flag to each tile obj that is a bg tile
+X -add collision logic to player interacting with map
+   X - add collision boundaries to object tiles
+        X -add passable flag to each tile obj that is a bg tile
         X - create impassable tile flag that can be switched on with toggle
         x - use active tile function to add impassable state to active tile obj
         X Set isPassable state to all tiles on creation to true
@@ -57,9 +57,20 @@ X-Stop player from moving outside map boundaries
                 X -check current position against all sides of the tile
                         X-translate sides from drawing into function
                     X -iff check passes allow movement
-        -test functionality with many impassable tiles
+        X -test functionality with many impassable tiles
 
 
-add basic items to map
+X - add basic items to map
+    
+    - add items to the tile palette
+        X - crop bow and arrow into separate 32x32 sprites
+        X- import bow vector skin into tilePallete comp
+        X-Create items tileset json file
+        X- create item tiles objects array matrix
+        - render items matrix below geography tiles on pallete
+
+ - add pick up item and use item functionality 
+
+
 add enemies to map
 add basic health and damage system

@@ -1,0 +1,18 @@
+{
+    "items": [
+      {
+        "name": "bow",
+        "size": {
+          "height": 32,
+          "width": 32
+        }
+      },
+      {
+        "name": "arrow",
+        "size": {
+          "height": 32,
+          "width": 32
+        }
+      }
+    ]
+}
