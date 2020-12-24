@@ -34,14 +34,19 @@ const App = () => {
         let id = 0;
         let x = 0;
         let y = 0;
-        console.log(itemTilesetData)
+        //console.log(itemTilesetData["items"])
+
+
 
         // loop through items data
         for(let itemIndex = 0; itemIndex < itemTilesetData["items"].length; itemIndex++) { 
+            let itemObj = itemTilesetData["items"][itemIndex];
+            
             // Create an item tile placeholder for each item        
             _ItemTiles.push({
                 x,
                 y,
+                itemObj,
                 id: id++,
                 v: { x: -32, y: -32, isImpassable: false },
             })
@@ -71,6 +76,7 @@ const App = () => {
         }
         setTiles(_tiles);
         generateItemTiles()
+        
     }, [])
 
     return <div

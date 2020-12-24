@@ -83,17 +83,66 @@ const TilePalette = ({
         //console.log(toggleChecked, activeTile, impassableTile, "in handlePassableToggle function");
     }
 
-    const renderItemTiles = (itemTiles) => {
+    const renderItemTiles = (paletteTiles) => {
         // map through itemTiles and render
-        
+        //console.log(itemTiles)
+        let paletteTilesLastRow = paletteTiles[paletteTiles.length - 1];
+        let lastPaletteTile = paletteTilesLastRow[paletteTilesLastRow.length - 1];
+        let x = lastPaletteTile.x;
+        let y = lastPaletteTile.y;
+        //assign x and y based on the end of the tiles array
+                //get x value of end tile
+                console.log(x, y)
         return (
-            <div>
-                <img        
+            // <div>
+            //     <img        
             
-                    src={bowSprite} 
-                    alt=""
-                />
-            </div>
+            //         src={bowSprite} 
+            //         alt=""
+            //     />
+            // </div>
+
+            <div>
+            {/* {
+                itemTiles.map((item, index) => {
+                    
+                    return (
+                        <div 
+                            key={item + index}
+                            style={{
+                                display: "flex"
+                            }}
+                        > 
+                        
+                            
+                                <div 
+                                    onClick={
+                                        () => {
+                                            setActiveTile({
+                                                x: x * 32,
+                                                y: y * 32,
+                                                isImpassable: impassableTile
+                                            
+                                            })
+                                            
+                                        }
+                                    }
+                                    style={{
+                                        borderTop: "1px solid black",
+                                        borderRight: "1px solid black",
+                                        background: `url(${tileset[sprite]}) -${x*32}px -${y*32}px no-repeat`,
+                                        width: 32,
+                                        height: 32,
+                                    }}
+                                >
+                                    
+                                </div>
+                        </div>
+                    )
+                })
+            } */}
+            
+        </div>
         )
     }
 
@@ -142,7 +191,7 @@ const TilePalette = ({
                     </div>
                 )
             }
-            {renderItemTiles()}
+            {renderItemTiles(tiles)}
         </div>
         
         
