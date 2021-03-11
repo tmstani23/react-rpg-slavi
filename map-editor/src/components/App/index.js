@@ -5,8 +5,11 @@ import useDraggable from "../../hooks/use-draggable";
 import springSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/spring.png';
 import fallSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/fall.png';
 import winterSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/winter.png';
-
 import Map from '../Map';
+const itemTilesetData = require('../../data/item-tilesets.json');
+
+
+
 
 
 const App = () => {
@@ -21,8 +24,38 @@ const App = () => {
     const [tiles, setTiles] = useState([]);
     const mapSize = {width: 800, height: 600};
     const [bgTile, setBgTile] = useState({x: -32, y: -32, v: { x: -32, y: -32, isImpassable: false }})
+    const [itemTiles, setItemTiles] = useState([]);
     const {position} = useDraggable("handle");
     const [activeTile, setActiveTile] = useState({x: 1 * 32, y: 4 * 32, v: { x: -32, y: -32, isImpassable: false }})
+    
+
+    const generateItemTiles = () => {
+        const _ItemTiles = [];
+        let id = 0;
+        let x = 0;
+        let y = 0;
+        //console.log(itemTilesetData["items"])
+
+
+
+        // loop through items data
+        for(let itemIndex = 0; itemIndex < itemTilesetData["items"].length; itemIndex++) { 
+            let itemObj = itemTilesetData["items"][itemIndex];
+            
+            // Create an item tile placeholder for each item        
+            _ItemTiles.push({
+                x,
+                y,
+                itemObj,
+                id: id++,
+                v: { x: -32, y: -32, isImpassable: false },
+            })
+        }
+            
+        // save the items array to item tiles state
+        //console.log(_ItemTiles)
+        setItemTiles(_ItemTiles);
+    }
 
     useEffect(() => {
         const _tiles = [];
@@ -42,6 +75,8 @@ const App = () => {
             _tiles.push(row);
         }
         setTiles(_tiles);
+        generateItemTiles()
+        
     }, [])
 
     return <div
@@ -58,6 +93,8 @@ const App = () => {
         <TilePalette 
             position={position}
             tileset={tileset}
+            itemTiles={itemTiles}
+            setItemTiles={setItemTiles} 
             setTileset={setTileset}
             setSprite={setSprite}
             sprite={sprite}

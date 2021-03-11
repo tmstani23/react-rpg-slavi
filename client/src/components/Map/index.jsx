@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import DropdownComponent from '../../components/Dropdown'
 
 const Map = (props) => {
     
