@@ -2,6 +2,7 @@
     "items": [
       {
         "name": "bow",
+        "spriteName": "bowSprite",
         "size": {
           "height": 32,
           "width": 32
@@ -9,6 +10,7 @@
       },
       {
         "name": "arrow",
+        "spriteName": "arrowSprite",
         "size": {
           "height": 32,
           "width": 32

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import bowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
-
+import arrowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
 
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
 const tilesetData = require('../../data/tilesets.json');
@@ -86,63 +86,95 @@ const TilePalette = ({
     const renderItemTiles = (paletteTiles) => {
         // map through itemTiles and render
         //console.log(itemTiles)
-        let paletteTilesLastRow = paletteTiles[paletteTiles.length - 1];
-        let lastPaletteTile = paletteTilesLastRow[paletteTilesLastRow.length - 1];
-        let x = lastPaletteTile.x;
-        let y = lastPaletteTile.y;
+        
+        
+        let paletteTilesLastRowIndex = paletteTiles.length;
+        console.log(paletteTilesLastRowIndex, 'ptlr')
+       
+        //console.log(lastPaletteTile, 'lastPalTile')
+        let x = 0
+        let y = paletteTilesLastRowIndex + 1;
         //assign x and y based on the end of the tiles array
                 //get x value of end tile
-                console.log(x, y)
+                
         return (
-            // <div>
-            //     <img        
-            
-            //         src={bowSprite} 
-            //         alt=""
-            //     />
-            // </div>
-
             <div>
-            {/* {
-                itemTiles.map((item, index) => {
+                {
                     
-                    return (
-                        <div 
-                            key={item + index}
-                            style={{
-                                display: "flex"
-                            }}
-                        > 
+                    itemTiles.map((item, index) => {
                         
-                            
-                                <div 
-                                    onClick={
-                                        () => {
-                                            setActiveTile({
-                                                x: x * 32,
-                                                y: y * 32,
-                                                isImpassable: impassableTile
-                                            
-                                            })
-                                            
-                                        }
+                        // increment y value for row change
+                        console.log(item, 'item')
+                        
+                        x += item.x
+                        y += item.y + index + 1
+                        console.log(x,y, 'xy')
+                       
+                        return (
+                            <div 
+                                key={y+420+index}
+                                style={{
+                                    display: "flex"
+                                }}
+                                onClick={
+                                    () => {
+                                        setActiveTile({
+                                            x: x * 32,
+                                            y: y * 32,
+                                            isImpassable: impassableTile
+                                        
+                                        })
+                                        
                                     }
+                                }
+                             > 
+                                <img
                                     style={{
                                         borderTop: "1px solid black",
                                         borderRight: "1px solid black",
-                                        background: `url(${tileset[sprite]}) -${x*32}px -${y*32}px no-repeat`,
                                         width: 32,
                                         height: 32,
                                     }}
-                                >
-                                    
-                                </div>
-                        </div>
-                    )
-                })
-            } */}
+                                    src={bowSprite} 
+                                    alt=""
+                                />             
+                            </div>
+                        )
+                        
+                    })
+                }
+                {
+                    console.log(activeTile, 'activetileobj')
+                }
+            </div>
             
-        </div>
+            // <div 
+            //     style={{
+            //         display: "flex", 
+            //     }}  
+            // >
+            //     <img style={{
+            //         display: "flex", 
+            //         borderTop: "1px solid black",
+            //         borderRight: "1px solid black",
+            //         width: 32,
+            //         height: 32,
+            //     }}
+            //         src={bowSprite} 
+            //         alt=""
+            //     />
+            //     <img style={{
+            //         display: "flex", 
+            //         borderTop: "1px solid black",
+            //         borderRight: "1px solid black",
+            //         width: 32,
+            //         height: 32,
+            //     }}
+            //         src={bowSprite} 
+            //         alt=""
+            //     />
+            // </div> 
+        
         )
     }
 
@@ -158,7 +190,7 @@ const TilePalette = ({
                     > 
                         {
                             row.map((tile, x) => {
-                                
+                                //console.log(x,y, 'xy in renderpalTiles')
                                 return (
                                     <div 
                                         key={x+420+index}
