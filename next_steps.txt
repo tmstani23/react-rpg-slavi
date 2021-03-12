@@ -67,7 +67,19 @@ X - add basic items to map
         X- import bow vector skin into tilePallete comp
         X-Create items tileset json file
         X- create item tiles objects array matrix
-        - render items matrix below geography tiles on pallete
+        X - render items matrix below geography tiles on pallete
+            X-create render items function
+                X-loop through items
+                x-render item img
+            - set active tile to item on click
+               X - add itemflag to active tile object
+               X - update x/y positions for active item tile
+        render active tile on tilemap
+            X-check if active tile is an itemTiles
+                X-if so render to activetile spot
+                - render to tilemap
+        save itemTiles in separate obj layer when map is exported
+            
 
  - add pick up item and use item functionality 
 

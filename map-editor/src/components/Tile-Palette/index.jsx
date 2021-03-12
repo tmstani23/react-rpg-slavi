@@ -86,42 +86,43 @@ const TilePalette = ({
     const renderItemTiles = (paletteTiles) => {
         // map through itemTiles and render
         //console.log(itemTiles)
-        
-        
         let paletteTilesLastRowIndex = paletteTiles.length;
-        console.log(paletteTilesLastRowIndex, 'ptlr')
+        //console.log(paletteTilesLastRowIndex, 'ptlr')
        
         //console.log(lastPaletteTile, 'lastPalTile')
-        let x = 0
+        
         let y = paletteTilesLastRowIndex + 1;
         //assign x and y based on the end of the tiles array
                 //get x value of end tile
                 
         return (
-            <div>
+            <div  
+                style={{
+                    display: "flex"
+                }}
+            >
                 {
                     
                     itemTiles.map((item, index) => {
                         
                         // increment y value for row change
-                        console.log(item, 'item')
+                        //console.log(item, 'item')
                         
-                        x += item.x
-                        y += item.y + index + 1
+                        let x = index;
+                        
                         console.log(x,y, 'xy')
                        
                         return (
                             <div 
                                 key={y+420+index}
-                                style={{
-                                    display: "flex"
-                                }}
+                               
                                 onClick={
                                     () => {
                                         setActiveTile({
                                             x: x * 32,
                                             y: y * 32,
-                                            isImpassable: impassableTile
+                                            isImpassable: impassableTile,
+                                            isItemTile: true
                                         
                                         })
                                         
@@ -290,8 +291,23 @@ const TilePalette = ({
 
     const renderActiveTile = () => {
         // dynamic border based on if tile is passable or not
+
+        //Check for if item tile and if so render with higher z index
+        
         
         return (
+            
+            activeTile.isItemTile ? 
+            
+            <div 
+                style={{
+                    background: `url(${bowSprite})`,
+                    width: 32,
+                    height: 32,
+                    border: `${activeTile.isImpassable ? "2px solid red" : "1px solid black"}`
+
+                }}
+            /> : 
             <div 
                 style={{
                     background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
@@ -312,6 +328,7 @@ const TilePalette = ({
         let jsonMap = {
             tileSetSprite: sprite,
             mapTiles,
+            itemTiles,
             bgTile,
         }
 
