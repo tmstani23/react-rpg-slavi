@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import bowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
-import arrowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
+import arrowSprite from '../../map_editor_resources/sprites/item-sprites/Arrow.png';
 
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
 const tilesetData = require('../../data/tilesets.json');
 
 const TilePalette = ({
     itemTiles,
+    itemSprites,
     setItemTiles,
     position,
     setBgTile,
@@ -86,42 +87,39 @@ const TilePalette = ({
     const renderItemTiles = (paletteTiles) => {
         // map through itemTiles and render
         //console.log(itemTiles)
-        
-        
         let paletteTilesLastRowIndex = paletteTiles.length;
-        console.log(paletteTilesLastRowIndex, 'ptlr')
+        //console.log(paletteTilesLastRowIndex, 'ptlr')
        
         //console.log(lastPaletteTile, 'lastPalTile')
-        let x = 0
+        
         let y = paletteTilesLastRowIndex + 1;
         //assign x and y based on the end of the tiles array
                 //get x value of end tile
                 
         return (
-            <div>
+            <div  
+                style={{
+                    display: "flex"
+                }}
+            >
                 {
-                    
+                    //Loop through item tiles and render item
                     itemTiles.map((item, index) => {
+                        //console.log(item, 'item')
+                        let x = index;
+                        //console.log(x,y, 'xy')
+                        let spriteString = item.itemObj.spriteName;
                         
-                        // increment y value for row change
-                        console.log(item, 'item')
-                        
-                        x += item.x
-                        y += item.y + index + 1
-                        console.log(x,y, 'xy')
-                       
+                       //console.log(itemSprites['bowSprite'])
                         return (
                             <div 
                                 key={y+420+index}
-                                style={{
-                                    display: "flex"
-                                }}
+                               //On click set tile as an active tile and pass the current item for use in active tile rendering
                                 onClick={
                                     () => {
                                         setActiveTile({
-                                            x: x * 32,
-                                            y: y * 32,
-                                            isImpassable: impassableTile
+                                            isImpassable: impassableTile,
+                                            item
                                         
                                         })
                                         
@@ -135,7 +133,7 @@ const TilePalette = ({
                                         width: 32,
                                         height: 32,
                                     }}
-                                    src={bowSprite} 
+                                    src={itemSprites[spriteString]} 
                                     alt=""
                                 />             
                             </div>
@@ -144,37 +142,9 @@ const TilePalette = ({
                     })
                 }
                 {
-                    console.log(activeTile, 'activetileobj')
+                    //console.log(activeTile, 'activetileobj')
                 }
             </div>
-            
-            // <div 
-            //     style={{
-            //         display: "flex", 
-            //     }}  
-            // >
-            //     <img style={{
-            //         display: "flex", 
-            //         borderTop: "1px solid black",
-            //         borderRight: "1px solid black",
-            //         width: 32,
-            //         height: 32,
-            //     }}
-            //         src={bowSprite} 
-            //         alt=""
-            //     />
-            //     <img style={{
-            //         display: "flex", 
-            //         borderTop: "1px solid black",
-            //         borderRight: "1px solid black",
-            //         width: 32,
-            //         height: 32,
-            //     }}
-            //         src={bowSprite} 
-            //         alt=""
-            //     />
-            // </div> 
-        
         )
     }
 
@@ -290,8 +260,23 @@ const TilePalette = ({
 
     const renderActiveTile = () => {
         // dynamic border based on if tile is passable or not
+
+        //Check for if item tile and if so render with higher z index
+        
         
         return (
+            
+            activeTile.item ? 
+            
+            <div 
+                style={{
+                    background: `url(${itemSprites[activeTile.item.itemObj.spriteName]})`,
+                    width: 32,
+                    height: 32,
+                    border: `${activeTile.isImpassable ? "2px solid red" : "1px solid black"}`
+
+                }}
+            /> : 
             <div 
                 style={{
                     background: `url(${tileset[sprite]}) -${activeTile.x}px -${activeTile.y}px no-repeat`,
@@ -312,6 +297,7 @@ const TilePalette = ({
         let jsonMap = {
             tileSetSprite: sprite,
             mapTiles,
+            itemTiles,
             bgTile,
         }
 

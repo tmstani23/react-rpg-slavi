@@ -62,15 +62,37 @@ X -add collision logic to player interacting with map
 
 X - add basic items to map
     
-    - add items to the tile palette
+    X - add items to the tile palette
         X - crop bow and arrow into separate 32x32 sprites
         X- import bow vector skin into tilePallete comp
         X-Create items tileset json file
         X- create item tiles objects array matrix
-        - render items matrix below geography tiles on pallete
+        X - render items matrix below geography tiles on pallete
+            X-create render items function
+                X-loop through items
+                x-render item img
+            - set active tile to item on click
+               X - add itemflag to active tile object
+               X - update x/y positions for active item tile
+        render active tile on tilemap
+            X-check if active tile is an itemTiles
+                X- if so render to activetile spot
+                x - add item obj to active tile on click
+                X- render active tile to tilemap
+                     X- render different tiles based on tiletype (renderTileLayers comp map index.js)
+                X - dynamically pass item import to render elements
+
+       X - save itemTiles in separate obj layer when map is exported
+    - import items and add to game map
+   
+            
 
  - add pick up item and use item functionality 
-
+     - add player to item collisions
+        - player passable
+            pick up item - remove from map
+                - create player inventory state
+                - item to player inventory
 
 add enemies to map
 add basic health and damage system
