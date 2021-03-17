@@ -1,6 +1,16 @@
 import React from 'react';
+import bowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
+import arrowSprite from '../../map_editor_resources/sprites/item-sprites/Arrow.png';
 
-const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) => {
+const Map = ({tiles, 
+    tileset, 
+    mapSize, 
+    bgTile, 
+    activeTile, 
+    setTiles, 
+    sprite,
+    itemSprites,
+}) => {
     
 
     const cloneMatrix = (matrix) => {
@@ -29,6 +39,7 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
                 defaultTile: false,
                 selectedTile: true
             }
+            console.log(tile);
             //swap in active tile to the cloned matrix and return it
             clone[y][x] = tile;
             //console.log(clone[y][x])
@@ -54,19 +65,44 @@ const Map = ({tiles, tileset, mapSize, bgTile, activeTile, setTiles, sprite}) =>
                                 const tileImpassableBorder = tile['v'].isImpassable ? "3px solid red" : "1px solid black";
                                 
                                 return (
-                                    <div
-                                        key={x+420}
-                                        onClick={() => dropTile({x, y})}
-                                        style={{
-                                            borderTop: tileImpassableBorder,
-                                            borderRight: tileImpassableBorder,
-                                            background: `url(${tileset[sprite]}) -${tileType === bgTile ? bgTile.x : tile.v.x}px -${tileType === bgTile ? bgTile.y : tile.v.y}px no-repeat`,
-                                            width: 32,
-                                            height: 32,
+                                    // render different tiles based on tiletype
+                                   <div>
+                                       {
+                                        tile.v.item && tileType !== bgTile 
+                                            ?  <div
+                                            key={x+420}
+                                            onClick={() => dropTile({x, y})}
+                                            style={{
+                                                borderTop: tileImpassableBorder,
+                                                borderRight: tileImpassableBorder,
+                                                background: `url(${itemSprites[tile.v.item.itemObj.spriteName]}) no-repeat`,
+                                                width: tile.v.item.itemObj.size.width,
+                                                height: tile.v.item.itemObj.size.height,
+                                                zIndex: 2
 
-                                        }}
-                                    >
-                                    </div>
+                                            }}
+                                            
+                                        >
+                                            </div>
+                                            : <div
+                                                key={x+420}
+                                                onClick={() => dropTile({x, y})}
+                                                style={{
+                                                    borderTop: tileImpassableBorder,
+                                                    borderRight: tileImpassableBorder,
+                                                    background: `url(${tileset[sprite]}) -${tileType === bgTile ? bgTile.x : tile.v.x}px -${tileType === bgTile ? bgTile.y : tile.v.y}px no-repeat`,
+                                                    width: 32,
+                                                    height: 32,
+
+                                                }}
+                                            >
+                                            
+                                            </div>
+                                        }
+                                   </div>
+                                    
+                                    
+                                    
                                 )
                             })
                         }

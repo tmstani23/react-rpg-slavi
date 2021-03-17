@@ -2,10 +2,15 @@ import React, {useEffect, useState } from 'react';
 import '../../map_editor_resources/css/styles.css';
 import TilePalette from '../Tile-Palette';
 import useDraggable from "../../hooks/use-draggable";
+import Map from '../Map';
+// Map Sprite imports
 import springSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/spring.png';
 import fallSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/fall.png';
 import winterSprite from '../../map_editor_resources/sprites/rpg-nature-tileset/winter.png';
-import Map from '../Map';
+// Item sprite imports
+import bowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
+import arrowSprite from '../../map_editor_resources/sprites/item-sprites/Arrow.png';
+
 const itemTilesetData = require('../../data/item-tilesets.json');
 
 
@@ -18,6 +23,10 @@ const App = () => {
         fallSprite,
         winterSprite
     });
+    const [itemSprites, setItemSprites] = useState({
+        arrowSprite,
+        bowSprite
+    })
     //Initialize passable state
     const [impassableTile, setImpassableTile] = useState(true);
     const [sprite, setSprite] = useState("springSprite");
@@ -93,6 +102,7 @@ const App = () => {
         <TilePalette 
             position={position}
             tileset={tileset}
+            itemSprites={itemSprites}
             itemTiles={itemTiles}
             setItemTiles={setItemTiles} 
             setTileset={setTileset}
@@ -110,6 +120,7 @@ const App = () => {
         <Map 
             tiles={tiles} 
             tileset={tileset} 
+            itemSprites={itemSprites}
             mapSize={mapSize} 
             activeTile = {activeTile}
             setTiles = {setTiles}

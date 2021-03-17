@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 import bowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
-import arrowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
+import arrowSprite from '../../map_editor_resources/sprites/item-sprites/Arrow.png';
 
 import dragHandleImg from "../../map_editor_resources/img/drag-handle.png";
 const tilesetData = require('../../data/tilesets.json');
 
 const TilePalette = ({
     itemTiles,
+    itemSprites,
     setItemTiles,
     position,
     setBgTile,
@@ -102,27 +103,23 @@ const TilePalette = ({
                 }}
             >
                 {
-                    
+                    //Loop through item tiles and render item
                     itemTiles.map((item, index) => {
-                        
-                        // increment y value for row change
                         //console.log(item, 'item')
-                        
                         let x = index;
+                        //console.log(x,y, 'xy')
+                        let spriteString = item.itemObj.spriteName;
                         
-                        console.log(x,y, 'xy')
-                       
+                       //console.log(itemSprites['bowSprite'])
                         return (
                             <div 
                                 key={y+420+index}
-                               
+                               //On click set tile as an active tile and pass the current item for use in active tile rendering
                                 onClick={
                                     () => {
                                         setActiveTile({
-                                            x: x * 32,
-                                            y: y * 32,
                                             isImpassable: impassableTile,
-                                            isItemTile: true
+                                            item
                                         
                                         })
                                         
@@ -136,7 +133,7 @@ const TilePalette = ({
                                         width: 32,
                                         height: 32,
                                     }}
-                                    src={bowSprite} 
+                                    src={itemSprites[spriteString]} 
                                     alt=""
                                 />             
                             </div>
@@ -145,37 +142,9 @@ const TilePalette = ({
                     })
                 }
                 {
-                    console.log(activeTile, 'activetileobj')
+                    //console.log(activeTile, 'activetileobj')
                 }
             </div>
-            
-            // <div 
-            //     style={{
-            //         display: "flex", 
-            //     }}  
-            // >
-            //     <img style={{
-            //         display: "flex", 
-            //         borderTop: "1px solid black",
-            //         borderRight: "1px solid black",
-            //         width: 32,
-            //         height: 32,
-            //     }}
-            //         src={bowSprite} 
-            //         alt=""
-            //     />
-            //     <img style={{
-            //         display: "flex", 
-            //         borderTop: "1px solid black",
-            //         borderRight: "1px solid black",
-            //         width: 32,
-            //         height: 32,
-            //     }}
-            //         src={bowSprite} 
-            //         alt=""
-            //     />
-            // </div> 
-        
         )
     }
 
@@ -297,11 +266,11 @@ const TilePalette = ({
         
         return (
             
-            activeTile.isItemTile ? 
+            activeTile.item ? 
             
             <div 
                 style={{
-                    background: `url(${bowSprite})`,
+                    background: `url(${itemSprites[activeTile.item.itemObj.spriteName]})`,
                     width: 32,
                     height: 32,
                     border: `${activeTile.isImpassable ? "2px solid red" : "1px solid black"}`
