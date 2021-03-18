@@ -6,6 +6,8 @@ import MapSelect from './components/MapSelect';
 import springSprite from '../../client/src/resources/rpg-nature-tileset/spring.png';
 import fallSprite from '../../client/src/resources/rpg-nature-tileset/fall.png';
 import winterSprite from '../../client/src/resources/rpg-nature-tileset/winter.png';
+import arrowSprite from '../src/resources/item-sprites/Arrow.png';
+import bowSprite from '../src/resources/item-sprites/Bow.png';
 
 
 function App() {
@@ -14,6 +16,10 @@ function App() {
     fallSprite,
     winterSprite
   });
+  const [itemSprites, setItemSprites] = useState({
+    arrowSprite,
+    bowSprite
+})
   const [sprite, setSprite] = useState("springSprite");
   const [userSelectedMapFile, setMapFile] = useState("");
   const [bgTile, setBgTile] = useState({x: -32, y: -32})
@@ -66,6 +72,7 @@ return (
           </div>
         : <div className="map-container-div">
           <Map 
+            itemSprites={itemSprites}
             setIsHome={setIsHome}
             tiles={tiles} 
             tileset={tileset} 

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 const Map = (props) => {
     
-    const {tiles, setIsHome, tileset, bgTile, sprite} = props
+    const {tiles, itemSprites, setIsHome, tileset, bgTile, sprite} = props
     const mapSize = {width: 800, height: 600};
     
     const spriteRenderOptions = (
@@ -46,18 +46,37 @@ const Map = (props) => {
                         {
                             row.map((tile, x) => {
                                 return (
-                                    <div
-                                        key={x+420}
+                                    <div>
                                         
-                                        style={{
-                                            background: 
-                                                `url(${tileset[sprite]}) -${spriteRenderOptions(tileType, tile).xPos}px -${spriteRenderOptions(tileType, tile).yPos}px no-repeat`,
-                                            width: 32,
-                                            height: 32,
+                                        {
+                                            tile.v.item && tileType !== bgTile 
+                                            ? <div
+                                            key={x+420}
+                                            style={{
+                                                background: `url(${itemSprites[tile.v.item.itemObj.spriteName]}) no-repeat`,
+                                                width: tile.v.item.itemObj.size.width,
+                                                height: tile.v.item.itemObj.size.height,
+                                                zIndex: 2
 
-                                        }}
-                                    >
+                                            }}
+                                            >
+                                                </div>
+                                            :
+                                            <div
+                                            key={x+420}
+                                            
+                                            style={{
+                                                background: 
+                                                    `url(${tileset[sprite]}) -${spriteRenderOptions(tileType, tile).xPos}px -${spriteRenderOptions(tileType, tile).yPos}px no-repeat`,
+                                                width: 32,
+                                                height: 32,
+    
+                                            }}
+                                        >
+                                        </div>
+                                        }
                                     </div>
+                                    
                                 )
                             })
                         }
