@@ -302,7 +302,7 @@ const TilePalette = ({
         }
 
         const dynamicSaveMapUrl = process.env.NODE_ENV === 'production' ? '/api/maps' : 'http://localhost:3002/api/maps';
-        console.log(dynamicSaveMapUrl, 'dynamic url in tilePalette comp')
+        //console.log(dynamicSaveMapUrl, 'dynamic url in tilePalette comp')
 
         //console.log(jsonMap);
 

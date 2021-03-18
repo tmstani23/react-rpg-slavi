@@ -1,15 +1,15 @@
 import React from 'react';
-import bowSprite from '../../map_editor_resources/sprites/item-sprites/Bow.png';
-import arrowSprite from '../../map_editor_resources/sprites/item-sprites/Arrow.png';
 
-const Map = ({tiles, 
+
+const Map = ({
+    tiles, 
+    itemSprites,
     tileset, 
     mapSize, 
     bgTile, 
     activeTile, 
     setTiles, 
     sprite,
-    itemSprites,
 }) => {
     
 
@@ -39,7 +39,7 @@ const Map = ({tiles,
                 defaultTile: false,
                 selectedTile: true
             }
-            console.log(tile);
+            //console.log(tile);
             //swap in active tile to the cloned matrix and return it
             clone[y][x] = tile;
             //console.log(clone[y][x])
